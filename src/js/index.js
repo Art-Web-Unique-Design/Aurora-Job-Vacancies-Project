@@ -1,2 +1,3 @@
 import '../sass/check.scss';
-console.log('CHECK!');
+let a = 2 + 3;
+console.log('CHECK!'+ a);
