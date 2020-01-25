@@ -1,0 +1,201 @@
+body{
+	font-family: $font-primary;
+	color: $color-black;
+	font-weight: $smallest-font-weight;
+	font-size: $default-font-size;
+	line-height: 1.6;
+}
+
+//Headers and paragraphs styling
+.heading-primary{
+	font-size: $largest-font-size;
+	font-weight: $medium-font-weight;
+	backface-visibility: hidden; /*убирает маленький рывок после анимации */
+}
+
+.heading-secondary{
+	font-size: $largest-font-size-1;
+	color: $color-secondary;
+	font-weight: $small-font-weight;
+	letter-spacing: $small-letter-space;
+}
+
+.heading-tertiary {
+	font-size: $medium-font-size;
+	font-weight: $small-font-weight;
+}
+
+.heading-fourth {
+	font-size: $default-font-size;
+	font-weight: $smallest-font-weight;
+}
+
+.sub-head{
+	font-size: $large-font-size;
+	color: $color-grey-dark;
+}
+
+
+// NAVIGATION
+.page-nav{
+	&__container {
+
+	}
+
+
+	&__item {
+
+		// Put all elements after the first to right
+		&-logo {
+
+		}
+
+		&:nth-child(2) {
+
+		}
+
+		&-img {
+
+		}
+
+		&-link {
+			text-decoration: none;
+		}
+	}
+
+	&__item-list {
+
+	}
+
+	&__list-item {
+		text-transform: uppercase;
+		font-weight: $smallest-font-weight;
+		font-size: $default-font-size;
+	}
+}
+
+
+
+// SECTION INDEX-HERO
+.index-hero{
+
+	&__container{
+		
+	}
+	
+	&__heading{
+		
+	}
+
+	&__text{
+		font-size: $medium-font-size;
+		font-weight: $small-font-weight;
+	}
+
+	&__form{
+
+	}
+}
+
+// SECTION INDEX-HOW
+.index-how{
+	&__container{
+		grid-column: center-start / center-end;
+		
+	}
+
+	&__sub-head{
+		
+	}
+
+	&__heading{
+		
+	}
+
+	&__items{
+
+	}
+
+	&__item{
+
+		&-icon{
+
+		}
+
+		&-content{
+			color: $color-secondary-light;
+			font-size: $default-font-size-2;
+		}
+
+		&-link{
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+	}
+}
+
+
+//SECTION INDEX_FIND
+.index-find{
+	background-color: $color-grey;
+	text-align: center;
+
+	&__container{
+		grid-column: center-start / center-end;
+	}
+
+	&__sub-head{
+		font-size: $large-font-size-1;	
+	}
+
+	&__heading{
+		font-size: $largest-font-size;
+	}
+
+	&__cards{
+		
+		&--first{
+
+		}
+
+		&--second{
+
+		}
+			
+	}
+
+	&__link{
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+
+
+//CARD TYPOGRAPHY
+.card{
+
+	&__img{
+		
+	}
+
+	&__type{
+		
+		text-transform: uppercase;
+		font-size: $small-font-size;
+
+		&--new{
+
+		}
+
+		&--engaged{
+
+		}
+
+	}
+
+	&__content{
+
+	}
+
+
+}

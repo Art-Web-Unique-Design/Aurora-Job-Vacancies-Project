@@ -6,8 +6,7 @@ module.exports = {
 	entry: ['./src/js/index.js'],
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'js/bundle.js',
-		publicPath: "/dist"
+		filename: 'js/bundle.js'
 	},
 	devServer: {
 		contentBase: './dist'
@@ -20,12 +19,12 @@ module.exports = {
 	],
 	module: {
 		rules: [
-		{
-			test: /\.js$/,
-			exclude: /node_modules/,
-			use: {
-				loader: 'babel-loader'
-			}
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader'
+				}
 		},
 	    {
 	        test: /\.s[ac]ss$/i,

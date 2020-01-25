@@ -1,0 +1,39 @@
+%main-grid-columns{
+	grid-template-columns:[full-start] minmax(6rem, 1fr) [center-start]
+						   repeat(10, [col-start] minmax(min-content, 12.4rem)
+						   [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+}
+
+//* FOR DEVELOPMENT *//
+body{
+	margin-bottom: 100vh;
+}
+
+.page-nav{
+	display: grid;
+	padding: $section-padding-small;
+	@extend %main-grid-columns;
+}
+
+#main{
+	.index-hero{
+		display: grid;
+		@extend %main-grid-columns;
+		justify-items: center;
+	}
+
+	.index-how{
+		display: grid;
+		@extend %main-grid-columns;
+		justify-items: center;
+		padding: $section-padding;
+	}
+
+	.index-find{
+		display: grid;
+		@extend %main-grid-columns;
+		justify-items: center;
+		padding: $section-padding;
+	}
+}

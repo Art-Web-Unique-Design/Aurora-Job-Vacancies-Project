@@ -1,0 +1,40 @@
+.index-find{
+	background-color: $color-grey;
+	text-align: center;
+
+	&__container{
+		grid-column: center-start / center-end;
+		width: 100%;
+	}
+
+	&__sub-head{
+
+	}
+
+	&__heading{
+
+	}
+
+
+
+	&__cards{
+		display: grid;
+		grid-template-columns:  repeat(auto-fit, minmax(min-content, 26rem));
+		justify-content: center;
+		grid-row-gap: $row-gap;
+		grid-column-gap: $column-gap;
+
+		&--first{
+
+		}
+
+		&--second{
+
+		}
+			
+	}	
+
+	&__link{
+		display: inline-block;
+	}
+}

@@ -1,0 +1,47 @@
+/* ~~~~~~~ INIT. BTN ~~~~~~~ */
+.btn {
+	padding: 1.6rem 4rem;
+	outline: none;
+	cursor: pointer;
+	border: .2rem $color-primary solid;
+	border-radius: .3rem;
+	color: $color-primary;
+	transition: $faster-main-transition;
+	
+	&--second{
+		padding: 1.2rem 4rem;
+		letter-spacing: .1rem;
+		color: $color-white;
+		background-color: $color-primary;
+		border: none;
+		&:hover{
+			opacity: .8;
+		}
+	}
+
+	&:hover{
+		transform: translateY(-.35rem);
+	}
+}
+
+
+.btn-text{
+
+	display: flex;
+	align-items: center;
+
+
+	&::before{
+				transition: $faster-main-transition;
+				content: '';
+				order: 1;
+				width: 2.5rem;
+				height: 2.5rem;
+				background-image: url(/img/arrow-right-red.png);
+	}
+
+	// Arrow animation effect
+	&:hover::before{
+		transform: translateX(.35rem);
+	}
+}

@@ -1,0 +1,53 @@
+.page-nav{
+	&__container {
+		grid-column: center-start / center-end;
+		height: 8rem;
+
+	// Put all nav__items one after another
+		display: flex;	
+		align-items: center;
+	}
+
+
+	&__item {
+
+		// Put all elements after the first to right
+		&-logo{
+			margin-right: auto;
+		}
+
+		&:nth-child(2){
+			margin-right: $right-margin-2;
+		}
+
+		&-img{
+			width: $width;
+		}
+
+		&-link {
+			color: $color-secondary;
+		}
+	}
+
+	&__item-list {
+		display: flex;
+		list-style: none;
+		.btn{
+			a{
+				color: $color-primary;
+			}
+		}
+	}
+
+	&__list-item {
+		&:first-child{
+			margin-right: $right-margin;
+		}
+		
+	}
+}
+
+/*
+	1. Make all variables
+	2. Put all colors into variables
+*/

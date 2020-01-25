@@ -1,0 +1,15 @@
+.red-underline{
+	position: relative;
+	
+	&::before{
+		content: '';
+		position: absolute;
+		top: 100%;
+		width: 4rem;
+		height: .4rem;
+		background-color: $color-primary;
+		border-radius: $primary-border-radius;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
