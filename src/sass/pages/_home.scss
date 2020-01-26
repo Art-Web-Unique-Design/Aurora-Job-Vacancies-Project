@@ -36,4 +36,11 @@ body{
 		justify-items: center;
 		padding: $section-padding;
 	}
+
+	.index-discover{
+		display: grid;
+		@extend %main-grid-columns;
+		justify-items: center;
+		padding: $section-padding;
+	}
 }

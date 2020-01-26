@@ -1,13 +1,55 @@
+.cards{
+	display: grid;
+	grid-template-columns:  repeat(auto-fit, minmax(min-content, 26rem));
+	justify-content: center;
+	grid-row-gap: $row-gap;
+	grid-column-gap: $column-gap;
+
+	&--second{
+		grid-column-gap: $small-column-gap;
+		grid-template-columns:  repeat(auto-fit, minmax(min-content, 27.5rem));
+	}
+}
+
 .card{
 	border-radius: $primary-border-radius;
 	overflow: hidden;
 	display: grid;
+
+	// SECOND TYPE OF CARDS
+	&-second{
+		border-radius: $primary-border-radius-1;
+		box-shadow: $primary-shadow;
+
+		img{
+			width: $card-width-2;
+		}
+
+		&__content{
+
+			padding: 3rem;
+			text-align: left;
+
+
+
+			&-paragraph{
+
+			}
+
+			&-link{
+				
+			}
+		}
+	}
+
 
 	&__img{
 		width: $card-width;
 		grid-row: 1 / 2;
 		grid-column: 1 / 2;
 	}
+
+
 
 	&__type{
 		grid-row: 1 / 2;
@@ -20,7 +62,7 @@
 		transition: $faster-main-transition;
 		cursor: pointer;
 
-		&--new{
+		&--pink{
 			background-color:$color-primary;
 			color:$color-white;
 			&:hover{
@@ -28,7 +70,7 @@
 			}
 		}
 
-		&--engaged{
+		&--grey{
 			background-color: $color-grey-light-1;
 			color: $color-grey-dark-1;
 			&:hover{
@@ -41,6 +83,6 @@
 	}
 
 	&__content{
-
+			
 	}
 }

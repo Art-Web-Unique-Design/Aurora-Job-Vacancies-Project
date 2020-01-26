@@ -30,6 +30,10 @@
 	display: flex;
 	align-items: center;
 
+	color: $color-primary;
+
+	text-transform: uppercase;
+	text-decoration: none;
 
 	&::before{
 				transition: $faster-main-transition;
@@ -39,6 +43,18 @@
 				height: 2.5rem;
 				background-image: url(/img/arrow-right-red.png);
 	}
+
+	&--second{
+		text-transform: none;
+
+		&::before{
+			margin-top: .4rem;
+			//MAKE HERE ARROW!!!
+			background-image: url(/img/arrow-right-red.png);
+			align-self: center;
+		}
+	}
+
 
 	// Arrow animation effect
 	&:hover::before{
