@@ -1,0 +1,9 @@
+.index-why{
+	background-color: $color-grey;
+
+	&__container{
+		grid-column: center-start / center-end;
+		text-align: center;
+		width: 100%;
+	}
+}
