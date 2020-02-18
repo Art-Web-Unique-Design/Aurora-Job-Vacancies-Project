@@ -1,0 +1,19 @@
+.index-cta{
+	position: relative;
+
+	&__bg-img{
+		position: absolute;
+		z-index: -1;
+		top: -25vh;
+		width: 120vw;
+	}
+
+	&__container{
+		grid-column: 4 / 10;
+		text-align: center;
+	}
+
+	&__link{
+		display: inline-block;
+	}
+}

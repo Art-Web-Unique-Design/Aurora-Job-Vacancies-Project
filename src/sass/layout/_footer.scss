@@ -1,0 +1,25 @@
+.footer{
+	.container{
+		grid-column: center-start / center-end;
+		width: 100%;
+	}
+
+	&__items{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min-content, 24.8rem));
+	}
+
+	&__item{
+
+		&-header{
+
+		}
+
+		&-list{
+
+			&-items{
+
+			}
+		}
+	}
+}

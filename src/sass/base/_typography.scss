@@ -163,12 +163,66 @@ body{
 	}
 
 	&__link{
-		text-decoration: none;
-		text-transform: uppercase;
+		
+	}
+}
+
+.index-why{
+	&__item{
+		color: $color-grey-dark-1;
+		font-size: $default-font-size-2;
+		&--title{
+			color: $color-primary;
+			font-size: $largest-font-size-3;
+		}
+	}
+}
+
+//SECTION FOOTER
+.footer{
+	.container{
+		
+	}
+
+	&__items{
+		
+	}
+
+	&__item{
+
+		&-header{
+			color: $color-primary;
+			text-transform: uppercase;
+			font-size: $default-font-size-2;
+			font-weight: $medium-font-weight;
+		}
+
+		&-list{
+			font-size: $default-font-size-2;
+			list-style: none;
+			line-height: 3.1rem;
+		}
+
+		&-link{
+			text-decoration: none;
+			color: currentColor;
+			&:hover{
+				color: #18A3FF;
+				text-decoration: underline;
+			}
+		}
+
+		&-mail{
+			color: #18A3FF;
+			font-size: $default-font-size-2;
+		}
 	}
 }
 
 
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //CARD TYPOGRAPHY
 .card{
 
@@ -224,6 +278,4 @@ body{
 	&__content{
 
 	}
-
-
 }

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 239 239">
+                        <defs>
+                            <circle id="a" cx="117.5" cy="117.5" r="117.5"></circle>
+                        </defs>
+                        <g fill="none" fill-rule="evenodd" transform="translate(2 2)">
+                            <mask id="b" fill="#fff">
+                                <use xlink:href="#a"></use>
+                            </mask>
+                            <circle cx="117.5" cy="117.5" r="118.5" stroke="#454545" stroke-width="2"></circle>
+                            <g mask="url(#b)" opacity=".188">
+                                <path fill="#FFF" stroke="#454545" stroke-width="2" d="M-10.967 136.667v94.528H89.95v-94.528"></path>
+                                <path stroke="#454545" stroke-width="2" d="M-19 136.667v-3.268l58.743-70.896 59.898 70.896v3.268H-7.703z"></path>
+                                <path stroke="#FFE6E2" stroke-width="4" d="M86.799 136.03V241"></path>
+                                <g stroke="#454545" stroke-width="2">
+                                    <path d="M28.944 198.758h21.598v31.688H28.944z"></path>
+                                    <path fill="#FFE6E2" d="M33.463 203.786h12.058v26.66H33.463z"></path>
+                                </g>
+                                <g stroke="#454545" stroke-width="2">
+                                    <path d="M6.1 151.997h21.598v32.191H6.1zM16.898 184.183l.251-32.18M5.602 162.562h22.342M5.602 173.372h22.342"></path>
+                                </g>
+                                <g stroke="#454545" stroke-width="2">
+                                    <path d="M53.295 151.997h21.598v32.191H53.295zM64.093 184.183l.251-32.18M52.797 162.562h22.342M52.797 173.372h22.342"></path>
+                                </g>
+                                <g stroke="#454545" stroke-width="2">
+                                    <path fill="#FFF" d="M25.68 121.588h29.13v-1.285c0-8.044-6.522-14.564-14.565-14.564-8.044 0-14.565 6.52-14.565 14.564v1.285z"></path>
+                                    <path d="M40.245 121.834v-15.838M40.245 121.834l11.548-10.307M40.245 121.834l-11.297-11.062"></path>
+                                </g>
+                                <path stroke="#454545" stroke-width="2" d="M25.685 231.447V241h28.367v-9.553z"></path>
+                                <path stroke="#454545" stroke-width="2" d="M-10.967 231.447V241H89.95v-9.553zM25.685 236.223h28.367M99.64 133.399H-19"></path>
+                                <path stroke="#FFE6E2" stroke-width="2" d="M100.64 140l-121.39-.513"></path>
+                                <g stroke-width="2">
+                                    <path fill="#FFE6E2" stroke="#F7C3BD" d="M5 218.5h8.476v-13.762a4.238 4.238 0 1 0-8.476 0V218.5z"></path>
+                                    <path stroke="#454545" d="M5 219h9v-14.5a4.5 4.5 0 0 0-9 0V219zM6.619 208.25h7.857"></path>
+                                </g>
+                                <g stroke-width="2">
+                                    <path fill="#FFE6E2" stroke="#F7C3BD" d="M65 218.5h8.476v-13.762a4.238 4.238 0 1 0-8.476 0V218.5z"></path>
+                                    <path stroke="#454545" d="M65 219h9v-14.5a4.5 4.5 0 0 0-9 0V219zM66.619 208.25h7.857"></path>
+                                </g>
+                                <path fill="#FFF" stroke="#454545" stroke-width="2" d="M-19 133h119v5H-19z"></path>
+                            </g>
+                            <g mask="url(#b)" opacity=".204">
+                                <path d="M138 158.131l35.453-79.626H390.11L425 158.131z"></path>
+                                <path d="M138 158.131l35.453-79.626H390.11L425 158.131z"></path>
+                                <path stroke="#454545" stroke-width="2" d="M155.445 153.547v65.767h252.673v-65.767"></path>
+                                <path fill="#FFE6E2" stroke="#454545" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M220.724 161.978v-8.431l60.776-31.479 60.776 31.479v8.431z"></path>
+                                <path stroke="#454545" stroke-width="2" d="M234.23 161.978v57.336"></path>
+                                <path fill="#FFF" stroke="#454545" stroke-width="2" d="M189.21 105.767v28.106h31.514v-28.106l-15.498-7.869z"></path>
+                                <path stroke="#454545" stroke-width="2" d="M177.955 111.388l27.271-13.49 26.752 13.115M174.453 201.45h13.757v-21.475a6.878 6.878 0 1 0-13.757 0v21.475zM175.704 185.025h12.38M202.59 201.45h13.757v-21.475a6.878 6.878 0 1 0-13.757 0v21.475zM203.841 185.025h12.38"></path>
+                                <path fill="#FFF" stroke="#454545" stroke-width="2" d="M220.724 153.547h122.115v8.431H220.724z"></path>
+                                <path stroke="#FFE6E2" stroke-width="3" d="M158.822 158.131v59.496"></path>
+                                <path stroke="#454545" stroke-width="2" d="M141 153l33.143-75h216.275L423 153z"></path>
+                            </g>
+                            <g mask="url(#b)">
+                                <g transform="translate(51 95)">
+                                    <path fill="#FFF" stroke="#454545" stroke-width="2" d="M9 36v90c17.95 10 37.45 15 58.5 15 21.05 0 39.716-5 56-15l1.11-90H9z"></path>
+                                    <g stroke="#454545" stroke-width="2">
+                                        <path fill="#FFE6E2" d="M60 106h14v32H60z"></path>
+                                        <path d="M53.5 139v-39h27v39"></path>
+                                    </g>
+                                    <g stroke="#454545" stroke-width="2">
+                                        <path fill="#FFE6E2" d="M21 46h16v19H21z"></path>
+                                        <path d="M20.53 55.763h16.94M29.265 45.525V64.95"></path>
+                                    </g>
+                                    <g stroke="#454545" stroke-width="2">
+                                        <path fill="#FFE6E2" d="M96 46h16v19H96z"></path>
+                                        <path d="M95.53 55.763h16.94M104.265 45.525V64.95"></path>
+                                    </g>
+                                    <g stroke-width="2">
+                                        <path fill="#FFE6E2" stroke="#F7C3BD" d="M21 107.137h9.308V93.085a4.654 4.654 0 1 0-9.308 0v14.052z"></path>
+                                        <path stroke="#454545" d="M21 108h10V93a5 5 0 1 0-10 0v15zM22.77 96.49h8.307"></path>
+                                    </g>
+                                    <g stroke-width="2">
+                                        <path fill="#FFE6E2" stroke="#F7C3BD" d="M102 105.137h9.308V91.085a4.654 4.654 0 1 0-9.308 0v14.052z"></path>
+                                        <path stroke="#454545" d="M102 106h10V91a5 5 0 1 0-10 0v15zM103.77 94.49h8.307"></path>
+                                    </g>
+                                    <path stroke="#454545" stroke-width="2" d="M61 46h11v10H61z"></path>
+                                    <path fill="#FFE6E2" d="M0 35v-4.854L17.005 0h97.956L132 30.146V35z"></path>
+                                    <path stroke="#454545" stroke-width="2" d="M0 35v-4.854L17.005 0h97.956L132 30.146V35zM38 80l29.013-14L95 80M43.5 136V77M88.5 136V77"></path>
+                                    <circle cx="67" cy="82" r="5" fill="#FFE6E2" stroke="#454545" stroke-width="2"></circle>
+                                    <path fill="#FFF" stroke="#454545" stroke-width="2" d="M132 31v4H0v-4z"></path>
+                                    <path stroke="#FFDDD8" stroke-width="3" d="M0 37.5h133"></path>
+                                    <path stroke="#FFE6E2" stroke-width="3" d="M11.5 39v76M121.5 37v88"></path>
+                                </g>
+                            </g>
+                            <text fill="#3A425A" font-size="24" mask="url(#b)">
+                                <tspan x="55.549" y="71">Appartments</tspan>
+                            </text>
+                        </g>
+                    </svg>

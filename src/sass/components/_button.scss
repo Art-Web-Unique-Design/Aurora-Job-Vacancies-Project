@@ -13,6 +13,8 @@
 		letter-spacing: .1rem;
 		color: $color-white;
 		background-color: $color-primary;
+		text-decoration: none;
+		text-transform: uppercase;
 		border: none;
 		&:hover{
 			opacity: .8;

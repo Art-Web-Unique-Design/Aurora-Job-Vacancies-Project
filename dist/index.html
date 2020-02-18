@@ -6,42 +6,273 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta author="Ganiullin Arthur">
 
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
+
 	<title>Aurora</title>
 </head>
 <body>
 	
 	<nav class="page-nav">
 		<div class="page-nav__container">
-			<div class="page-nav__item">
-				<a href="#"><img src="img/logo.png" alt="LOGO"></a>
+			<div class="page-nav__item page-nav__item-logo">
+				<a href="#"><img class="page-nav__item-img" src="img/logo.png" alt="LOGO"></a>
 			</div>
-			<div class="page-nav__item"></div>
-			<div class="page-nav__item"></div>
+			<div class="page-nav__item">
+				<ul class="page-nav__item-list">
+					<li class="page-nav__list-item"><a href="#" class=" page-nav__item-link">Find a job</a></li>
+					<li class="page-nav__list-item"><a href="#" class=" page-nav__item-link">Offer a vacancy</a></li>
+				</ul>
+			</div>
+			<div class="page-nav__item">
+				<ul class="page-nav__item-list">
+					<li class="page-nav__list-item btn"><a href="#" class=" page-nav__item-link">Login</a></li>
+					<li class="page-nav__list-item btn"><a href="#" class=" page-nav__item-link">Sign up</a></li>
+				</ul>
+			</div>
 		</div>
 	</nav>
 
 	<main id="main">	
 		<section class="index-hero">
 			<div class="index-hero__container">
-				<h1>Stop Searching... Start Buying</h1>
-				<p>Buy and Sell Rental Properties Online</p>
-				<form action="---" class="index-hero__search-form">
+				<h1 class="heading-primary index-hero__heading">Stop Searching... Start Buying.</h1>
+				<p class="index-hero__text u-margin-bottom-medium">Buy and Sell Rental Properties Online</p>
+				<form action="---" class="index-hero__form">
 					----
 				</form>
 			</div>
 		</section>
-		<section class="index-how"></section>
-		<section class="index-find"></section>
-		<section class="index-discover"></section>
-		<section class="index-why"></section>
-		<section class="index-cta"></section>
+
+		<section class="index-how">
+			<div class="index-how__container">
+				<p class="index-how__sub-head sub-head">How It Works</p>
+				<h2 class="index-how__heading heading-secondary u-margin-bottom-big red-underline">Simplify Your Real Estate Investments</h2>
+				<div class="index-how__items">
+					<div class="index-how__item">
+						
+                        <!------------------------ 
+                        <svg class="index-how__item-icon">
+                            <use xlink:href="img/svg/appartments.svg"></use>
+                        </svg>------>
+                       <img src="img/svg/appartments.svg" alt="Appartments" class="index-how__item-icon">
+						<p class="index-how__item-content">
+							Get a competitive offer. Skip the hassle of listing individual houses, showings, and months of uncertainty.
+						</p>
+						<a href="#" class="index-how__item-link btn-text">
+							Buy rentals properties
+						</a>
+					</div>
+
+					<div class="index-how__item index-how__item-second">
+						<!------------------------------->
+                        <img src="img/svg/seller-buyer.svg" alt="----" class="index-how__item-icon index-how__item-icon--second">
+						<p class="index-how__item-content">
+							Whether you are a buyer or a seller, Our platform makes it easy on decision suitability for your needs.
+						</p>
+						<a href="#" class="index-how__item-link btn-text">
+							See rentals properties
+						</a>
+					</div>
+
+					<div class="index-how__item">
+						<!----------------------------->
+                        <img src="img/svg/listing.svg" alt="----" class="index-how__item-icon">
+						<p class="index-how__item-content">
+							Find the right investment property for you. Make investment decision using proprietary data and technology.
+						</p>
+						<a href="#" class="index-how__item-link btn-text">
+							Start now
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="index-find">
+			<div class="index-find__container">
+				<!--FIRST NEW VACANCIES-->
+				<p class="index-find__sub-head sub-head">Find Rentals Properties Anywhere</p>
+				<h2 class="red-underline heading-secondary index-find__heading u-margin-bottom-big">Buy Rentals Properties</h2>
+				<div class="index-find__cards cards index-find__cards--first u-margin-bottom-huge">
+					<div class="index-find__card card">
+						<img src="/img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
+						<span class="index-find__card-type card__type--pink card__type">NEW</span>
+						<div class="index-find__card-content card__content">---</div>
+					</div>
+					<div class="index-find__card card">
+						<img src="/img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
+						<span class="index-find__card-type card__type--pink card__type">NEW</span>
+						<div class="index-find__card-content card__content">---</div>
+					</div>
+					<div class="index-find__card card">
+						<img src="/img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
+						<span class="index-find__card-type card__type--pink card__type">NEW</span>
+						<div class="index-find__card-content card__content">---</div>
+					</div>
+					<div class="index-find__card card">
+						<img src="/img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
+						<span class="index-find__card-type card__type--pink card__type">NEW</span>
+						<div class="index-find__card-content card__content">---</div>
+					</div>
+				</div>
+				<!--SECOND APPLIED VACANCIES-->
+				<p class="index-find__sub-head sub-head">Disposition of Rental Properties Made Easy</p>
+				<h2 class="red-underline heading-secondary index-find__heading u-margin-bottom-big">Recently Sold Properties</h2>
+				<div class="index-find__cards cards index-find__cards--second u-margin-bottom-big">
+					<div class="index-find__card card">
+						<img src="/img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
+						<span class="index-find__card-type card__type--grey card__type">ENGAGED</span>
+						<div class="index-find__card-content card__content">---</div>
+					</div>
+					<div class="index-find__card card">
+						<img src="/img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
+						<span class="index-find__card-type card__type--grey card__type">ENGAGED</span>
+						<div class="index-find__card-content card__content">---</div>
+					</div>
+					<div class="index-find__card card">
+						<img src="/img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
+						<span class="index-find__card-type card__type--grey card__type">ENGAGED</span>
+						<div class="index-find__card-content card__content">---</div>
+					</div>
+				</div>
+				<a href="#" class="index-find__link btn btn--second">Show all listing</a>
+			</div>
+		</section>
+
+		<section class="index-discover">
+            <div class="index-discover__container">
+                <h2 class="red-underline heading-secondary index-discover__heading u-margin-bottom-big">Discover Markets with Under the Radar Deals</h2>
+               <div class="index-discover__items cards cards-second">
+                   <div class="index-discover__card card card-second">
+                        <img src="/img/city.jpg" alt="work offer" class="index-find__card-img card__img">
+                        <span class="index-discover__card-type card__type--pink card__type">Germany</span>
+                        <div class="index-discover__card-content card-second__content">
+                            <p class="card-second__content-paragraph">47 houses for sale</p>
+                            <a href="#" class="card-second__content-link btn-text btn-text--second">See Dallas Listing</a>
+                        </div>
+                    </div>
+
+                    <div class="index-discover__card card card-second">
+                        <img src="/img/city.jpg" alt="work offer" class="index-find__card-img card__img">
+                        <span class="index-discover__card-type card__type--pink card__type">Australia</span>
+                        <div class="index-discover__card-content card-second__content">
+                            <p class="card-second__content-paragraph">26 houses for sale</p>
+                            <a href="#" class="card-second__content-link btn-text btn-text--second">See Houston Listing</a>
+                        </div>
+                    </div>
+
+                    <div class="index-discover__card card card-second">
+                        <img src="/img/city.jpg" alt="work offer" class="index-find__card-img card__img">
+                        <span class="index-discover__card-type card__type--pink card__type">Japan</span>
+                        <div class="index-discover__card-content card-second__content">
+                            <p class="card-second__content-paragraph">66 houses for sale</p>
+                            <a href="#" class="card-second__content-link btn-text btn-text--second">See Oklahoma Listing</a>
+                        </div>
+                    </div>
+
+                    <div class="index-discover__card card card-second">
+                        <img src="/img/city.jpg" alt="work offer" class="index-find__card-img card__img">
+                        <span class="index-discover__card-type card__type--pink card__type">England</span>
+                        <div class="index-discover__card-content card-second__content">
+                            <p class="card-second__content-paragraph">39 houses for sale</p>
+                            <a href="#" class="card-second__content-link btn-text btn-text--second">See San Antonio Listing</a>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </section>
+
+		<section class="index-why">
+            <div class="index-why__container">
+                <p class="index-why__sub-head sub-head">Why Choose Us</p>
+                <h2 class="red-underline heading-secondary index-why__heading u-margin-bottom-big">Why Choose Aurora.</h2>
+                <div class="index-why__items">
+                    <div class="index-why__item">
+                        <img src="img/svg/sold.svg" alt="----" class="index-why__item-img">
+                        <p class="index-why__item--title">520+</p>
+                        <p>Properties</p>
+                    </div>
+                    <div class="index-why__item">
+                        <img src="img/svg/assets.svg" alt="----" class="index-why__item-img">
+                        <p class="index-why__item--title">$900M+</p>
+                        <p>Total Assets on Platform</p>
+                    </div>
+                    <div class="index-why__item">
+                        <img src="img/svg/client.svg" alt="----" class="index-why__item-img">
+                        <p class="index-why__item--title">75k+</p>
+                        <p>Clients in database</p>
+                    </div>
+                    <div class="index-why__item">
+                        <img src="img/svg/secure.svg" alt="----" class="index-why__item-img">
+                        <p class="index-why__item--title">Trust</p>
+                        <p>Secure transactions with investors</p>
+                    </div>
+                </div>
+            </div>      
+        </section>
+		<section class="index-cta">
+            <img src="/img/svg/cta-bg.svg" alt="----" class="index-cta__bg-img">
+            <div class="index-cta__container">
+                <h2 class="heading-secondary u-margin-bottom-big">Get&nbsp;our&nbsp;newest&nbsp;listings delivered&nbsp;to&nbsp;your&nbsp;inbox.</h2>
+                <a href="#" class="btn btn--second index-cta__link">Sign up</a>
+            </div>      
+        </section>
 	</main>
 
-	<footer class="footer"></footer>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__items">
+				<div class="footer__item">
+					<h4 class="footer__item-header heading-fourth u-margin-bottom-medium">Business</h4>
+					<ul class="footer__item-list">
+						<li class="footer__list-item"><a href="#" class="footer__item-link">Buy Properties</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link">Sell Properties</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link">Agents & Brokers</a></li>
+					</ul>
+				</div>
+				<div class="footer__item">
+					<h4 class="footer__item-header heading-fourth u-margin-bottom-medium">About us</h4>
+					<ul class="footer__item-list">
+						<li class="footer__list-item"><a href="#" class="footer__item-link">What We Do</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link">Our Team</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link">Press</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link">Partners</a></li>
+					</ul>
+				</div>
+				<div class="footer__item">
+					<h4 class="footer__item-header heading-fourth u-margin-bottom-medium">Learn</h4>
+					<ul class="footer__item-list">
+						<li class="footer__list-item"><a href="#" class="footer__item-link">How It Works</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link">Financing</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link">FAQ</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link">Contact</a></li>
+					</ul>
+				</div>
+				<div class="footer__item">
+					<h4 class="footer__item-header heading-fourth u-margin-bottom-medium">Contact us</h4>
+					<ul class="footer__item-list">
+						<li class="footer__list-item">General Inquiries</li>
+						<li class="footer__list-item"><a href="#" class="footer__item-mail">support@aurora.com</a></li>
+						<li class="footer__list-item">5301 Alpha Rd Suite 80,</li>
+						<li class="footer__list-item">Moscow</li>
+					</ul>
+				</div>
+				<div class="footer__item">
+					<h4 class="footer__item-header heading-fourth u-margin-bottom-medium">Questions?</h4>
+					<ul class="footer__item-list">
+						<li class="footer__list-item"><a href="#" class="footer__item-link btn btn--second">GET IN TOUCH</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link"></a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link"></a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 
 
 
 
-<script type="text/javascript" src="/dist/js/bundle.js"></script></body>
+<script type="text/javascript" src="js/bundle.js"></script></body>
 </html>

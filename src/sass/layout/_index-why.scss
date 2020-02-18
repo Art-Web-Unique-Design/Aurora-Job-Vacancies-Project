@@ -6,4 +6,31 @@
 		text-align: center;
 		width: 100%;
 	}
+
+	&__items{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
+		justify-content: center;
+		grid-column-gap: $medium-column-gap;
+		align-items: baseline;
+	}
+
+	&__item{
+		&-img{
+			width: 19.5rem;
+		}
+		&:nth-child(1){
+					img{
+						width: 18.5rem;
+					}	
+				}
+		&:nth-child(3){
+					img{
+							width: 17.5rem;
+						}			
+				}
+		&--title{
+			margin-top: 2rem;
+		}
+	}
 }
