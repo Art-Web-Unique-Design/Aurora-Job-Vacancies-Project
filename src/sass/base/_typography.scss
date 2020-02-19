@@ -180,16 +180,8 @@ body{
 
 //SECTION FOOTER
 .footer{
-	.container{
-		
-	}
-
-	&__items{
-		
-	}
-
 	&__item{
-
+		color: $color-secondary-light;
 		&-header{
 			color: $color-primary;
 			text-transform: uppercase;
@@ -225,8 +217,58 @@ body{
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!COMPONENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //CARD TYPOGRAPHY
 .card{
+	&__img{
+			
+	}
 
-	// SECOND TYPE OF CARDS
+	&__type{
+		
+		//text-transform: uppercase;
+		font-size: $small-font-size;
+		letter-spacing: .1rem;
+		font-weight: $medium-font-weight;
+
+		&--pink{
+
+		}
+
+		&--grey{
+
+		}
+	}
+
+	&__content{
+		color: $color-secondary;
+		text-align: left;
+	}
+
+	&__heading{
+		font-size: $medium-font-size;
+		font-weight: $small-font-weight;
+	}
+
+	&__text{
+
+	}
+
+	&-publication{
+		
+	}
+
+	&__notes{
+
+		&-level{
+
+		}
+
+		&-type{
+
+		}
+	}
+
+	
+
+	//**************** SECOND TYPE OF CARDS *************************//
 	&-second{
 
 		img{
@@ -246,36 +288,7 @@ body{
 			}
 		}
 	}
+	//**************** END OF SECOND TYPE OF CARDS *************************//
 
-
-	&__img{
-		width: $card-width;
-		grid-row: 1 / 2;
-		grid-column: 1 / 2;
-	}
-
-	&__img{
-		
-	}
-
-	&__type{
-		
-		//text-transform: uppercase;
-		font-size: $small-font-size;
-		letter-spacing: .1rem;
-		font-weight: $medium-font-weight;
-
-		&--new{
-
-		}
-
-		&--engaged{
-
-		}
-
-	}
-
-	&__content{
-
-	}
+	
 }

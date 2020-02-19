@@ -10,15 +10,38 @@
 	}
 
 	&__item{
-
-		&-header{
-
+		
+		&-btn{
+			.btn{
+				padding: 1.4rem 3.5rem;
+				display: inline-block;
+				&:hover{
+					text-decoration: none;
+					color: $color-white;
+				}
+			}
 		}
 
 		&-list{
+			&--icons{
+				display: flex;
 
-			&-items{
+				li{
+					&:not(:last-child){
+						margin-right: 2rem;
+					}
+				}
+			}
+		}
 
+		&-icon{
+			fill: $color-primary;
+			width: 2rem;
+			height: 2rem;
+			opacity: .6;
+			transition: $faster-main-transition;
+			&:hover{
+				opacity: 1;
 			}
 		}
 	}

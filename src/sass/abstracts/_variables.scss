@@ -47,8 +47,8 @@ $medium-font-weight: 600;
 $big-font-weight: 900;
 
 //DEFAULT SHADOW
-$primary-shadow: 4px 0 20px rgba($color-black, .1);
-$primary-shadow-light: 2px 7px 5px rgba($color-black, .1);
+$primary-shadow: .4rem .7rem 1.2rem rgba($color-black, .3);
+$primary-shadow-light: .2rem .7rem .5rem rgba($color-black, .1);
 
 //LETTER SPACING
 $small-letter-space: .2rem;
@@ -71,6 +71,9 @@ $width: 11.5rem;
 $card-width: 26rem;
 $card-width-2: 27.5rem;
 
+// IMG HEIGHT
+$card-height: 17.5rem;
+
 //TRANSITION
 $slow-main-transition: .8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 $main-transition: .3s .001s cubic-bezier(.54,.14,.42,.98);
@@ -78,6 +81,7 @@ $faster-main-transition: .155s cubic-bezier(.54,.14,.42,.98);
 
 
 //Grid gap
+$smallest-row-gap: .6rem;
 $small-row-gap: 1.5rem;
 $row-gap: 4rem;
 $row-gap-1: 3rem;
@@ -95,4 +99,4 @@ $large-column-gap: 12rem;
 
 //BORDER RADIUS
 $primary-border-radius: .3rem;
-$primary-border-radius-1: .6rem;
+$primary-border-radius-1: .7rem;
