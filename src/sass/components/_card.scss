@@ -6,8 +6,7 @@
 	grid-column-gap: $column-gap;
 
 	&--second{
-		grid-column-gap: $small-column-gap;
-		grid-template-columns:  repeat(auto-fit, minmax(min-content, 27.5rem));
+
 	}
 }
 
@@ -16,6 +15,13 @@
 	overflow: hidden;
 	display: grid;
 	box-shadow: $primary-shadow;
+	border-bottom: 2px solid $color-primary;
+	transition: $faster-main-transition;
+	cursor: pointer;
+
+	&:hover{
+		transform: translateY(-.5rem);
+	}
 
 	&__img{
 		//object-fit: cover;
@@ -97,6 +103,7 @@
 	&-second{
 		border-radius: $primary-border-radius-1;
 		box-shadow: $primary-shadow;
+		cursor: auto;
 
 		img{
 			width: $card-width-2;

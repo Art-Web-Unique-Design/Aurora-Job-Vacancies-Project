@@ -35,18 +35,42 @@
 	<main id="main">	
 		<section class="index-hero">
 			<div class="index-hero__container">
-				<h1 class="heading-primary index-hero__heading">Stop Searching... Start Buying.</h1>
-				<p class="index-hero__text u-margin-bottom-medium">Buy and Sell Rental Properties Online</p>
+
+				<h1 class="heading-primary index-hero__heading">Stop Searching... Start Working.</h1>
+
+				<p class="index-hero__text u-margin-bottom-medium">Offer and Apply Different Vacancies Online</p>
+
 				<form action="---" class="index-hero__form">
-					----
+					<div class="index-hero__selection-wrapper">
+						<select id="index-hero__form-level index-hero__form-selection" required>
+							<option value="" disabled selected hidden>Please Choose...</option>
+							<option value="internship">Internship</option>
+							<option value="entrylevel">Entry Level</option>
+							<option value="midlevel">Mid Level</option>
+							<option value="seniorlevel">Senior Level</option>
+						</select>
+					</div>
+					<div class="index-hero__selection-wrapper">
+						<select id="index-hero__form-company index-hero__form-selection" required>
+							<option value="" disabled selected hidden>Please Choose...</option>
+							<option value="small">Small</option>
+							<option value="medium">Medium</option>
+							<option value="large">Large</option>
+						</select>
+					</div>
+					<div class="index-hero__selection-wrapper">
+						<input type="text" class="input-hero__form-location" placeholder="Choose Location" required>
+					</div>
+					<button class=" index-hero__form-btn btn btn--second">Start</button>
 				</form>
+
 			</div>
 		</section>
 
 		<section class="index-how">
 			<div class="index-how__container">
 				<p class="index-how__sub-head sub-head">How It Works</p>
-				<h2 class="index-how__heading heading-secondary u-margin-bottom-big red-underline">Simplify Your Real Estate Investments</h2>
+				<h2 class="index-how__heading heading-secondary u-margin-bottom-big red-underline">Simplify Your Real Job Search</h2>
 				<div class="index-how__items">
 					<div class="index-how__item">
 						
@@ -56,10 +80,10 @@
                         </svg>------>
                        <img src="img/svg/appartments.svg" alt="Appartments" class="index-how__item-icon">
 						<p class="index-how__item-content">
-							Get a competitive offer. Skip the hassle of listing individual houses, showings, and months of uncertainty.
+							Get a competitive offer. Skip the hassle of listing individual appartments, showings, and months of uncertainty.
 						</p>
 						<a href="#" class="index-how__item-link btn-text">
-							Buy rentals properties
+							Buy or Rent properties
 						</a>
 					</div>
 
@@ -67,10 +91,10 @@
 						<!------------------------------->
                         <img src="img/svg/seller-buyer.svg" alt="----" class="index-how__item-icon index-how__item-icon--second">
 						<p class="index-how__item-content">
-							Whether you are a buyer or a seller, Our platform makes it easy on decision suitability for your needs.
+							Whether you are a recruiter or a employee. Our platform makes it easy on decision suitability for your needs.
 						</p>
 						<a href="#" class="index-how__item-link btn-text">
-							See rentals properties
+							See open vacancies
 						</a>
 					</div>
 
@@ -78,7 +102,7 @@
 						<!----------------------------->
                         <img src="img/svg/listing.svg" alt="----" class="index-how__item-icon">
 						<p class="index-how__item-content">
-							Find the right investment property for you. Make investment decision using proprietary data and technology.
+							Check what company provides and make decisions to apply for vacancies using proprietary data and technology.
 						</p>
 						<a href="#" class="index-how__item-link btn-text">
 							Start now
@@ -91,8 +115,8 @@
 		<section class="index-find">
 			<div class="index-find__container">
 				<!--FIRST NEW VACANCIES-->
-				<p class="index-find__sub-head sub-head">Find Rentals Properties Anywhere</p>
-				<h2 class="red-underline heading-secondary index-find__heading u-margin-bottom-big">Buy Rentals Properties</h2>
+				<p class="index-find__sub-head sub-head">Find The Most Suitable Jobs</p>
+				<h2 class="red-underline heading-secondary index-find__heading u-margin-bottom-big">Newest This Month</h2>
 				<div class="index-find__cards cards index-find__cards--first u-margin-bottom-huge">
 					<div class="index-find__card card">
 						<img src="/img/computer_science.jpg" alt="work offer" class="index-find__card-img card__img">
@@ -187,69 +211,122 @@
 						</div>
 					</div>
 				</div>
-				<!--SECOND APPLIED VACANCIES-->
-				<p class="index-find__sub-head sub-head">Disposition of Rental Properties Made Easy</p>
-				<h2 class="red-underline heading-secondary index-find__heading u-margin-bottom-big">Recently Sold Properties</h2>
-				<div class="index-find__cards cards index-find__cards--second u-margin-bottom-big">
+
+
+				<p class="index-find__sub-head sub-head">Innovative Companies</p>
+				<h2 class="red-underline heading-secondary index-find__heading u-margin-bottom-big">The Aurora Team Picks</h2>
+				<div class="index-find__cards cards cards--second u-margin-bottom-big">
 					<div class="index-find__card card">
 						<img src="/img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
-						<span class="index-find__card-type card__type--grey card__type">ENGAGED</span>
-						<div class="index-find__card-content card__content">---</div>
+						<div class="index-find__card-content card__content">
+							<h4 class="index-find__card-heading card__heading heading-fourth">
+								Company Name
+							</h4>
+							<p class="index-find__card-text card__text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
+							</p>
+							<div class="index-find__card-publication card__publication">
+								10.02.2020
+							</div>
+							<p class="index-find__card-notes card__notes">
+								<span class="index-find__notes-level card__notes-level">
+									<span class="card__dark-select">Level:</span> Senior
+								</span> 
+								<span class="card__notes-type">
+									<span class="card__dark-select">Type:</span> external
+								</span>
+							</p>
+						</div>
 					</div>
 					<div class="index-find__card card">
 						<img src="/img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
-						<span class="index-find__card-type card__type--grey card__type">ENGAGED</span>
-						<div class="index-find__card-content card__content">---</div>
+						<div class="index-find__card-content card__content">
+							<h4 class="index-find__card-heading card__heading heading-fourth">
+								Company Name
+							</h4>
+							<p class="index-find__card-text card__text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
+							</p>
+							<div class="index-find__card-publication card__publication">
+								10.02.2020
+							</div>
+							<p class="index-find__card-notes card__notes">
+								<span class="index-find__notes-level card__notes-level">
+									<span class="card__dark-select">Level:</span> Senior
+								</span> 
+								<span class="card__notes-type">
+									<span class="card__dark-select">Type:</span> external
+								</span>
+							</p>
+						</div>
 					</div>
 					<div class="index-find__card card">
 						<img src="/img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
-						<span class="index-find__card-type card__type--grey card__type">ENGAGED</span>
-						<div class="index-find__card-content card__content">---</div>
+						<div class="index-find__card-content card__content">
+							<h4 class="index-find__card-heading card__heading heading-fourth">
+								Company Name
+							</h4>
+							<p class="index-find__card-text card__text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
+							</p>
+							<div class="index-find__card-publication card__publication">
+								10.02.2020
+							</div>
+							<p class="index-find__card-notes card__notes">
+								<span class="index-find__notes-level card__notes-level">
+									<span class="card__dark-select">Level:</span> Senior
+								</span> 
+								<span class="card__notes-type">
+									<span class="card__dark-select">Type:</span> external
+								</span>
+							</p>
+						</div>
 					</div>
-				</div>
+			</div>	
 				<a href="#" class="index-find__link btn btn--second">Show all listing</a>
-			</div>
 		</section>
 
 		<section class="index-discover">
             <div class="index-discover__container">
-                <h2 class="red-underline heading-secondary index-discover__heading u-margin-bottom-big">Discover Markets with Under the Radar Deals</h2>
+                <h2 class="red-underline heading-secondary index-discover__heading u-margin-bottom-big">Discover Opportunities with Under the Radar Jobs</h2>
+                <!--SECOND TYPE OF CARDS-->
                <div class="index-discover__items cards cards-second">
                    <div class="index-discover__card card card-second">
-                        <img src="/img/city.jpg" alt="work offer" class="index-find__card-img card__img">
+                        <img src="/img/Berlin.jpg" alt="work offer" class="index-find__card-img card__img">
                         <span class="index-discover__card-type card__type--pink card__type">Germany</span>
                         <div class="index-discover__card-content card-second__content">
-                            <p class="card-second__content-paragraph">47 houses for sale</p>
-                            <a href="#" class="card-second__content-link btn-text btn-text--second">See Dallas Listing</a>
+                            <p class="card-second__content-paragraph">1.5M+ Vacancies Apply</p>
+                            <a href="#" class="card-second__content-link btn-text btn-text--second">See Berlin Listing</a>
                         </div>
                     </div>
 
                     <div class="index-discover__card card card-second">
                         <img src="/img/city.jpg" alt="work offer" class="index-find__card-img card__img">
-                        <span class="index-discover__card-type card__type--pink card__type">Australia</span>
+                        <span class="index-discover__card-type card__type--pink card__type">Russia</span>
                         <div class="index-discover__card-content card-second__content">
-                            <p class="card-second__content-paragraph">26 houses for sale</p>
-                            <a href="#" class="card-second__content-link btn-text btn-text--second">See Houston Listing</a>
+                            <p class="card-second__content-paragraph">600k+ Vacancies Apply</p>
+                            <a href="#" class="card-second__content-link btn-text btn-text--second">See Moscow Listing</a>
                         </div>
                     </div>
 
                     <div class="index-discover__card card card-second">
-                        <img src="/img/city.jpg" alt="work offer" class="index-find__card-img card__img">
+                        <img src="/img/Tokyo.jpg" alt="work offer" class="index-find__card-img card__img">
                         <span class="index-discover__card-type card__type--pink card__type">Japan</span>
                         <div class="index-discover__card-content card-second__content">
-                            <p class="card-second__content-paragraph">66 houses for sale</p>
-                            <a href="#" class="card-second__content-link btn-text btn-text--second">See Oklahoma Listing</a>
+                            <p class="card-second__content-paragraph">2M+ Vacancies Apply</p>
+                            <a href="#" class="card-second__content-link btn-text btn-text--second">See Tokyo Listing</a>
                         </div>
                     </div>
 
                     <div class="index-discover__card card card-second">
-                        <img src="/img/city.jpg" alt="work offer" class="index-find__card-img card__img">
+                        <img src="/img/London.jpg" alt="work offer" class="index-find__card-img card__img">
                         <span class="index-discover__card-type card__type--pink card__type">England</span>
                         <div class="index-discover__card-content card-second__content">
-                            <p class="card-second__content-paragraph">39 houses for sale</p>
-                            <a href="#" class="card-second__content-link btn-text btn-text--second">See San Antonio Listing</a>
+                            <p class="card-second__content-paragraph">1.7M+ Vacancies Apply</p>
+                            <a href="#" class="card-second__content-link btn-text btn-text--second">See London Listing</a>
                         </div>
                     </div>
+                    <!-- END OF SECOND TYPE OF CARDS -->
                </div>
             </div>
         </section>
@@ -261,23 +338,23 @@
                 <div class="index-why__items">
                     <div class="index-why__item">
                         <img src="img/svg/sold.svg" alt="----" class="index-why__item-img">
-                        <p class="index-why__item--title">520+</p>
-                        <p>Properties</p>
+                        <p class="index-why__item--title">3.6M+</p>
+                        <p>Contracts</p>
                     </div>
                     <div class="index-why__item">
                         <img src="img/svg/assets.svg" alt="----" class="index-why__item-img">
                         <p class="index-why__item--title">$900M+</p>
-                        <p>Total Assets on Platform</p>
+                        <p>Jobs with Best Conditions and Salary</p>
                     </div>
                     <div class="index-why__item">
                         <img src="img/svg/client.svg" alt="----" class="index-why__item-img">
-                        <p class="index-why__item--title">75k+</p>
-                        <p>Clients in database</p>
+                        <p class="index-why__item--title">865M+</p>
+                        <p>Emloyees in database</p>
                     </div>
                     <div class="index-why__item">
                         <img src="img/svg/secure.svg" alt="----" class="index-why__item-img">
                         <p class="index-why__item--title">Trust</p>
-                        <p>Secure transactions with investors</p>
+                        <p>Clear Terms and Contracts</p>
                     </div>
                 </div>
             </div>      
@@ -297,9 +374,9 @@
 				<div class="footer__item">
 					<h4 class="footer__item-header heading-fourth u-margin-bottom-medium">Business</h4>
 					<ul class="footer__item-list">
-						<li class="footer__list-item"><a href="#" class="footer__item-link">Buy Properties</a></li>
-						<li class="footer__list-item"><a href="#" class="footer__item-link">Sell Properties</a></li>
-						<li class="footer__list-item"><a href="#" class="footer__item-link">Agents & Brokers</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link">Offer a Vacancy</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link">Apply for Vacancy</a></li>
+						<li class="footer__list-item"><a href="#" class="footer__item-link">Coaches & Recruiters</a></li>
 					</ul>
 				</div>
 				<div class="footer__item">
@@ -326,7 +403,7 @@
 						<li class="footer__list-item">General Inquiries</li>
 						<li class="footer__list-item"><a href="#" class="footer__item-mail">support@aurora.com</a></li>
 						<li class="footer__list-item">5301 Alpha Rd Suite 80,</li>
-						<li class="footer__list-item">Moscow</li>
+						<li class="footer__list-item">Kazan</li>
 					</ul>
 				</div>
 				<div class="footer__item">

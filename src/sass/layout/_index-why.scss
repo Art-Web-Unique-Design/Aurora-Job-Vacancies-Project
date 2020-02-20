@@ -22,8 +22,12 @@
 		&:nth-child(1){
 					img{
 						width: 18.5rem;
-					}	
+					}
+					p:nth-child(3){
+						margin-left: -1.7rem;
+					}
 				}
+
 		&:nth-child(3){
 					img{
 							width: 17.5rem;

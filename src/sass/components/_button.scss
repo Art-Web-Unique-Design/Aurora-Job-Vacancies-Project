@@ -23,6 +23,12 @@
 
 	&:hover{
 		transform: translateY(-.35rem);
+		box-shadow: $primary-shadow-light;
+	}
+
+	&:focus{
+		transform: translateY(0);
+		box-shadow: none;
 	}
 }
 

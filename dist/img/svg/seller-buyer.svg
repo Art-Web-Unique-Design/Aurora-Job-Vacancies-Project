@@ -28,7 +28,7 @@
                                 <circle cx="80.727" cy="92.606" r="2.955" fill="#FC2B5F" opacity=".651"></circle>
                                 <circle cx="54.152" cy="92.606" r="2.955" fill="#FC2B5F" opacity=".645"></circle>
                                 <text fill="#3A425A" font-size="17">
-                                    <tspan x="44.867" y="32.621">Buyer</tspan>
+                                    <tspan x="32.867" y="32.621">Employee</tspan>
                                 </text>
                             </g>
                             <mask id="b" fill="#fff">
@@ -50,7 +50,7 @@
                                 <path stroke="#454545" stroke-width="2" d="M21 66v4.333H9.975C5.25 70.333 0 72.5 0 79M29 78l-8-7M34.5 66v5M35 71l-6 7M35 71.042h10.256C51.752 70.68 55 72.667 55 77M28.5 78v7"></path>
                             </g>
                             <text fill="#3A425A" font-size="17">
-                                <tspan x="42.173" y="33">Seller</tspan>
+                                <tspan x="29.173" y="33">Recruiter</tspan>
                             </text>
                         </g>
                     </svg>
