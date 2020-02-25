@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta author="Ganiullin Arthur">
@@ -40,28 +39,62 @@
 
 				<p class="index-hero__text u-margin-bottom-medium">Offer and Apply Different Vacancies Online</p>
 
-				<form action="---" class="index-hero__form">
-					<div class="index-hero__selection-wrapper">
-						<select id="index-hero__form-level index-hero__form-selection" required>
-							<option value="" disabled selected hidden>Please Choose...</option>
-							<option value="internship">Internship</option>
-							<option value="entrylevel">Entry Level</option>
-							<option value="midlevel">Mid Level</option>
-							<option value="seniorlevel">Senior Level</option>
-						</select>
+				<form action="---" class="form" autocomplete="off">
+					<div class="form__level form__selection-group">
+							<h4 class="heading-fourth form__group-heading">
+								Job Level
+							</h4>
+
+							<label for="internship_level">
+								<input id="internship_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="internship">
+								Internship
+							</label>
+
+							<label for="entry_level">
+								<input id="entry_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="entrylevel">
+								Entry Level
+							</label>
+
+							<label for="mid_level">
+								<input id="mid_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="midlevel">
+								Mid Level
+							</label>
+
+							<label for="senior_level">
+								<input id="senior_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="seniorlevel">
+								Senior Level
+							</label>
 					</div>
-					<div class="index-hero__selection-wrapper">
-						<select id="index-hero__form-company index-hero__form-selection" required>
-							<option value="" disabled selected hidden>Please Choose...</option>
-							<option value="small">Small</option>
-							<option value="medium">Medium</option>
-							<option value="large">Large</option>
-						</select>
+
+					<div class="form__size form__selection-group">
+						<h4 class="heading-fourth form__group-heading">
+								Company Size
+						</h4>
+
+						<label>
+							<input type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" value="small">
+							Small
+						</label>
+
+						<label for="size_medium">
+							<input id="size_medium" type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" class="index-hero__size-input" value="medium">
+							Medium
+						</label>
+
+						<label for="size_large">
+							<input id="size_large" type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" class="index-hero__size-input" value="large">
+							Large
+						</label>
 					</div>
-					<div class="index-hero__selection-wrapper">
-						<input type="text" class="input-hero__form-location" placeholder="Choose Location" required>
+					<div class="form__location-wrapper form__selection-group">
+						<h4 class="heading-fourth form__group-heading">
+								Location
+						</h4>
+						<div class="autocomplete">
+							<input id="location_select" type="text" class="form__location" placeholder="City" required>
+						</div>
 					</div>
-					<button class=" index-hero__form-btn btn btn--second">Start</button>
+					<button class="form__btn btn btn--second">Start</button>
 				</form>
 
 			</div>
@@ -119,96 +152,106 @@
 				<h2 class="red-underline heading-secondary index-find__heading u-margin-bottom-big">Newest This Month</h2>
 				<div class="index-find__cards cards index-find__cards--first u-margin-bottom-huge">
 					<div class="index-find__card card">
-						<img src="/img/computer_science.jpg" alt="work offer" class="index-find__card-img card__img">
+						<img src="./img/computer_science.jpg" alt="work offer" class="index-find__card-img card__img">
 						<span class="index-find__card-type card__type--pink card__type">NEW</span>
-						<div class="index-find__card-content card__content">
-							<h4 class="index-find__card-heading card__heading heading-fourth">
-								Company Name
-							</h4>
-							<p class="index-find__card-text card__text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
-							</p>
-							<div class="index-find__card-publication card__publication">
-								10.02.2020
+						<a href="#">
+							<div class="index-find__card-content card__content">
+								<h4 class="index-find__card-heading card__heading heading-fourth">
+									Company Name
+								</h4>
+								<p class="index-find__card-text card__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
+								</p>
+								<div class="index-find__card-publication card__publication">
+									10.02.2020
+								</div>
+								<p class="index-find__card-notes card__notes">
+									<span class="index-find__notes-level card__notes-level">
+										<span class="card__dark-select">Level:</span> Senior
+									</span> 
+									<span class="card__notes-type">
+										<span class="card__dark-select">Type:</span> external
+									</span>
+								</p>
 							</div>
-							<p class="index-find__card-notes card__notes">
-								<span class="index-find__notes-level card__notes-level">
-									<span class="card__dark-select">Level:</span> Senior
-								</span> 
-								<span class="card__notes-type">
-									<span class="card__dark-select">Type:</span> external
-								</span>
-							</p>
-						</div>
+						</a>
+					</div>
+
+					<div class="index-find__card card">
+						<img src="./img/design.jpg" alt="work offer" class="index-find__card-img card__img">
+						<span class="index-find__card-type card__type--pink card__type">NEW</span>
+						<a href="#">
+							<div class="index-find__card-content card__content">
+								<h4 class="index-find__card-heading card__heading heading-fourth">
+									Company Name
+								</h4>
+								<p class="index-find__card-text card__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
+								</p>
+								<div class="index-find__card-publication card__publication">
+									10.02.2020
+								</div>
+								<p class="index-find__card-notes card__notes">
+									<span class="index-find__notes-level card__notes-level">
+										<span class="card__dark-select">Level:</span> Senior
+									</span> 
+									<span class="card__notes-type">
+										<span class="card__dark-select">Type:</span> external
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="index-find__card card">
+						<img src="./img/medicine.jpg" alt="work offer" class="index-find__card-img card__img">
+						<span class="index-find__card-type card__type--pink card__type">NEW</span>
+						<a href="#">
+							<div class="index-find__card-content card__content">
+								<h4 class="index-find__card-heading card__heading heading-fourth">
+									Company Name
+								</h4>
+								<p class="index-find__card-text card__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
+								</p>
+								<div class="index-find__card-publication card__publication">
+									10.02.2020
+								</div>
+								<p class="index-find__card-notes card__notes">
+									<span class="index-find__notes-level card__notes-level">
+										<span class="card__dark-select">Level:</span> Senior
+									</span> 
+									<span class="card__notes-type">
+										<span class="card__dark-select">Type:</span> external
+									</span>
+								</p>
+							</div>
+						</a>
 					</div>
 					<div class="index-find__card card">
-						<img src="/img/design.jpg" alt="work offer" class="index-find__card-img card__img">
+						<img src="./img/finance.jpg" alt="work offer" class="index-find__card-img card__img">
 						<span class="index-find__card-type card__type--pink card__type">NEW</span>
-						<div class="index-find__card-content card__content">
-							<h4 class="index-find__card-heading card__heading heading-fourth">
-								Company Name
-							</h4>
-							<p class="index-find__card-text card__text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
-							</p>
-							<div class="index-find__card-publication card__publication">
-								10.02.2020
+						<a href="#">
+							<div class="index-find__card-content card__content">
+								<h4 class="index-find__card-heading card__heading heading-fourth">
+									Company Name
+								</h4>
+								<p class="index-find__card-text card__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
+								</p>
+								<div class="index-find__card-publication card__publication">
+									10.02.2020
+								</div>
+								<p class="index-find__card-notes card__notes">
+									<span class="index-find__notes-level card__notes-level">
+										<span class="card__dark-select">Level:</span> Senior
+									</span> 
+									<span class="card__notes-type">
+										<span class="card__dark-select">Type:</span> external
+									</span>
+								</p>
 							</div>
-							<p class="index-find__card-notes card__notes">
-								<span class="index-find__notes-level card__notes-level">
-									<span class="card__dark-select">Level:</span> Senior
-								</span> 
-								<span class="card__notes-type">
-									<span class="card__dark-select">Type:</span> external
-								</span>
-							</p>
-						</div>
-					</div>
-					<div class="index-find__card card">
-						<img src="/img/medicine.jpg" alt="work offer" class="index-find__card-img card__img">
-						<span class="index-find__card-type card__type--pink card__type">NEW</span>
-						<div class="index-find__card-content card__content">
-							<h4 class="index-find__card-heading card__heading heading-fourth">
-								Company Name
-							</h4>
-							<p class="index-find__card-text card__text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
-							</p>
-							<div class="index-find__card-publication card__publication">
-								10.02.2020
-							</div>
-							<p class="index-find__card-notes card__notes">
-								<span class="index-find__notes-level card__notes-level">
-									<span class="card__dark-select">Level:</span> Senior
-								</span> 
-								<span class="card__notes-type">
-									<span class="card__dark-select">Type:</span> external
-								</span>
-							</p>
-						</div>
-					</div>
-					<div class="index-find__card card">
-						<img src="/img/finance.jpg" alt="work offer" class="index-find__card-img card__img">
-						<span class="index-find__card-type card__type--pink card__type">NEW</span>
-						<div class="index-find__card-content card__content">
-							<h4 class="index-find__card-heading card__heading heading-fourth">
-								Company Name
-							</h4>
-							<p class="index-find__card-text card__text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
-							</p>
-							<div class="index-find__card-publication card__publication">
-								10.02.2020
-							</div>
-							<p class="index-find__card-notes card__notes">
-								<span class="index-find__notes-level card__notes-level">
-									<span class="card__dark-select">Level:</span> Senior
-								</span> 
-								<span class="card__notes-type">
-									<span class="card__dark-select">Type:</span> external
-								</span>
-							</p>
-						</div>
+						</a>
 					</div>
 				</div>
 
@@ -217,70 +260,76 @@
 				<h2 class="red-underline heading-secondary index-find__heading u-margin-bottom-big">The Aurora Team Picks</h2>
 				<div class="index-find__cards cards cards--second u-margin-bottom-big">
 					<div class="index-find__card card">
-						<img src="/img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
-						<div class="index-find__card-content card__content">
-							<h4 class="index-find__card-heading card__heading heading-fourth">
-								Company Name
-							</h4>
-							<p class="index-find__card-text card__text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
-							</p>
-							<div class="index-find__card-publication card__publication">
-								10.02.2020
+						<img src="./img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
+						<a href="#">
+							<div class="index-find__card-content card__content">
+								<h4 class="index-find__card-heading card__heading heading-fourth">
+									Company Name
+								</h4>
+								<p class="index-find__card-text card__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
+								</p>
+								<div class="index-find__card-publication card__publication">
+									10.02.2020
+								</div>
+								<p class="index-find__card-notes card__notes">
+									<span class="index-find__notes-level card__notes-level">
+										<span class="card__dark-select">Level:</span> Senior
+									</span> 
+									<span class="card__notes-type">
+										<span class="card__dark-select">Type:</span> external
+									</span>
+								</p>
 							</div>
-							<p class="index-find__card-notes card__notes">
-								<span class="index-find__notes-level card__notes-level">
-									<span class="card__dark-select">Level:</span> Senior
-								</span> 
-								<span class="card__notes-type">
-									<span class="card__dark-select">Type:</span> external
-								</span>
-							</p>
-						</div>
+						</a>
 					</div>
 					<div class="index-find__card card">
-						<img src="/img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
-						<div class="index-find__card-content card__content">
-							<h4 class="index-find__card-heading card__heading heading-fourth">
-								Company Name
-							</h4>
-							<p class="index-find__card-text card__text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
-							</p>
-							<div class="index-find__card-publication card__publication">
-								10.02.2020
+						<img src="./img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
+						<a href="#">
+							<div class="index-find__card-content card__content">
+								<h4 class="index-find__card-heading card__heading heading-fourth">
+									Company Name
+								</h4>
+								<p class="index-find__card-text card__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
+								</p>
+								<div class="index-find__card-publication card__publication">
+									10.02.2020
+								</div>
+								<p class="index-find__card-notes card__notes">
+									<span class="index-find__notes-level card__notes-level">
+										<span class="card__dark-select">Level:</span> Senior
+									</span> 
+									<span class="card__notes-type">
+										<span class="card__dark-select">Type:</span> external
+									</span>
+								</p>
 							</div>
-							<p class="index-find__card-notes card__notes">
-								<span class="index-find__notes-level card__notes-level">
-									<span class="card__dark-select">Level:</span> Senior
-								</span> 
-								<span class="card__notes-type">
-									<span class="card__dark-select">Type:</span> external
-								</span>
-							</p>
-						</div>
+						</a>
 					</div>
 					<div class="index-find__card card">
-						<img src="/img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
-						<div class="index-find__card-content card__content">
-							<h4 class="index-find__card-heading card__heading heading-fourth">
-								Company Name
-							</h4>
-							<p class="index-find__card-text card__text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
-							</p>
-							<div class="index-find__card-publication card__publication">
-								10.02.2020
+						<img src="./img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
+						<a href="#">
+							<div class="index-find__card-content card__content">
+								<h4 class="index-find__card-heading card__heading heading-fourth">
+									Company Name
+								</h4>
+								<p class="index-find__card-text card__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus aut architecto totam, sint ullam accusantium! Debitis corporis amet illo, exercitationem voluptatem ut, aperiam dolore nesciunt. Delectus et, ea hic iste!
+								</p>
+								<div class="index-find__card-publication card__publication">
+									10.02.2020
+								</div>
+								<p class="index-find__card-notes card__notes">
+									<span class="index-find__notes-level card__notes-level">
+										<span class="card__dark-select">Level:</span> Senior
+									</span> 
+									<span class="card__notes-type">
+										<span class="card__dark-select">Type:</span> external
+									</span>
+								</p>
 							</div>
-							<p class="index-find__card-notes card__notes">
-								<span class="index-find__notes-level card__notes-level">
-									<span class="card__dark-select">Level:</span> Senior
-								</span> 
-								<span class="card__notes-type">
-									<span class="card__dark-select">Type:</span> external
-								</span>
-							</p>
-						</div>
+						</a>
 					</div>
 			</div>	
 				<a href="#" class="index-find__link btn btn--second">Show all listing</a>
@@ -301,7 +350,7 @@
                     </div>
 
                     <div class="index-discover__card card card-second">
-                        <img src="/img/city.jpg" alt="work offer" class="index-find__card-img card__img">
+                        <img src="./img/city.jpg" alt="work offer" class="index-find__card-img card__img">
                         <span class="index-discover__card-type card__type--pink card__type">Russia</span>
                         <div class="index-discover__card-content card-second__content">
                             <p class="card-second__content-paragraph">600k+ Vacancies Apply</p>
@@ -310,7 +359,7 @@
                     </div>
 
                     <div class="index-discover__card card card-second">
-                        <img src="/img/Tokyo.jpg" alt="work offer" class="index-find__card-img card__img">
+                        <img src="./img/Tokyo.jpg" alt="work offer" class="index-find__card-img card__img">
                         <span class="index-discover__card-type card__type--pink card__type">Japan</span>
                         <div class="index-discover__card-content card-second__content">
                             <p class="card-second__content-paragraph">2M+ Vacancies Apply</p>
@@ -319,7 +368,7 @@
                     </div>
 
                     <div class="index-discover__card card card-second">
-                        <img src="/img/London.jpg" alt="work offer" class="index-find__card-img card__img">
+                        <img src="./img/London.jpg" alt="work offer" class="index-find__card-img card__img">
                         <span class="index-discover__card-type card__type--pink card__type">England</span>
                         <div class="index-discover__card-content card-second__content">
                             <p class="card-second__content-paragraph">1.7M+ Vacancies Apply</p>
@@ -349,7 +398,7 @@
                     <div class="index-why__item">
                         <img src="img/svg/client.svg" alt="----" class="index-why__item-img">
                         <p class="index-why__item--title">865M+</p>
-                        <p>Emloyees in database</p>
+                        <p>Employees in database</p>
                     </div>
                     <div class="index-why__item">
                         <img src="img/svg/secure.svg" alt="----" class="index-why__item-img">
@@ -360,7 +409,7 @@
             </div>      
         </section>
 		<section class="index-cta">
-            <img src="/img/svg/cta-bg.svg" alt="----" class="index-cta__bg-img">
+            <img src="./img/svg/cta-bg.svg" alt="----" class="index-cta__bg-img">
             <div class="index-cta__container">
                 <h2 class="heading-secondary u-margin-bottom-big">Get&nbsp;our&nbsp;newest&nbsp;listings delivered&nbsp;to&nbsp;your&nbsp;inbox.</h2>
                 <a href="#" class="btn btn--second index-cta__link">Sign up</a>
@@ -440,4 +489,14 @@
 		</div>
 	</footer>
 <script type="text/javascript" src="js/bundle.js"></script></body>
+<script>
+	function onlyOne(checkbox, name) {
+	    let checkboxes = document.getElementsByName(name)
+	    checkboxes.forEach((item) => {
+	        if (item !== checkbox) item.checked = false
+	    })
+	}
+</script>
+
+
 </html>

@@ -92,25 +92,30 @@ body{
 		font-weight: $small-font-weight;
 	}
 
-	&__form{
+	.form{
 
-		&-selection{
+		&__level{
+			
+		}
+
+		&__group-heading{
+			font-size: $default-font-size-2;
+			color: $color-secondary-light;
+		}
+
+		label{
+			color: $color-secondary-dark;
+		}
+
+		&__size{
 
 		}
 
-		&-lever{
-
+		&__location{
+			font-size: $small-font-size;
 		}
 
-		&-company{
-
-		}
-
-		&-location{
-
-		}
-
-		&-btn{
+		&__btn{
 			font-weight: $medium-font-weight;
 		}
 	}
@@ -254,6 +259,10 @@ body{
 		&--grey{
 
 		}
+	}
+
+	a {
+		text-decoration: none;
 	}
 
 	&__content{

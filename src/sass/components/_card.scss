@@ -17,7 +17,6 @@
 	box-shadow: $primary-shadow;
 	border-bottom: 2px solid $color-primary;
 	transition: $faster-main-transition;
-	cursor: pointer;
 
 	&:hover{
 		transform: translateY(-.5rem);

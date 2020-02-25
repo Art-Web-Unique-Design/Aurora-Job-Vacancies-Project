@@ -1,3 +1,7 @@
 import '../sass/main.scss';
-let a = 2 + 3;
-console.log('CHECK!'+ a);
+import { autocomplete } from './autocomplete/Autocomplete.js';
+
+/********************* LOCATION AUTOCOMPLETE ********************************/
+autocomplete(document.getElementById('location_select'));
+/*********************-----------------------********************************/
+
