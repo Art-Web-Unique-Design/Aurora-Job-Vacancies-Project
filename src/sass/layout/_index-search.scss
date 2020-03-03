@@ -27,18 +27,21 @@
 		border: none;
 
 		transition: $faster-main-transition;
-		
-		span {
-			display: inline-block;
-			transform: translateY(-.2rem);
-		}
+
 
 		&--active {
-			span {
-				transform: translateY(0);
-			}
+			position: relative;
 			padding: 1rem 2rem;
-			border-bottom: .3rem solid $color-primary;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: calc(100% - .3rem);
+				left: 0;
+				width: 100%;
+				border-bottom: .3rem solid $color-primary;
+			}
+			//border-bottom: .3rem solid $color-primary;
 		}
 
 		&:hover{

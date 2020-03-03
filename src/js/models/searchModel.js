@@ -19,14 +19,15 @@ export default class infoSearch {
 	}
 
 	async checkSize(query) {
-		let i = 2;
+		this.i = 2;
 		let res_check = await axios(`https://www.themuse.com/api/public/${this.query}`);
-		while(res_check.data.results.length != 0 && i < 100)
+		while(res_check.data.results.length != 0 && this.i < 21)
 		{
-			res_check = await axios(`https://www.themuse.com/api/public/${this.query.replace(/[1-9]+$/gi, i)}`);
-			i++;
+			res_check = await axios(`https://www.themuse.com/api/public/${this.query.replace(/[1-9]+$/gi, this.i)}`);
 			console.log(res_check.data.results);
-			console.log(i);
+			console.log(this.i);
+			this.i++;
 		}
+		this.i--;
 	}
 }

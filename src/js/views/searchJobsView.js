@@ -23,7 +23,7 @@ export const getInput = () => {
 
 export const clearResults = () => {
 	elements.searchResList.innerHTML = '';
-}
+};
 
 const renderJob = job => {
 	const markup = `
@@ -42,15 +42,15 @@ const renderJob = job => {
 		</div>
 	`;
 	elements.searchResList.insertAdjacentHTML('beforeend', markup);
-}
+};
 
 export const renderResults = (jobs, page = 1, resPerPage = 20) => {
 	// render results of current page
 	const start = (page - 1) * resPerPage;
 	const end = page * resPerPage;
 
-	jobs.slice(start, end).forEach(renderJob);
+	jobs.forEach(renderJob);
 
 	// render pagination buttons
 	//renderButtons(page, jobs.length, resPerPgage);
-}
+};
