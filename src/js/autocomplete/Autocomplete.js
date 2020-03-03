@@ -5,7 +5,7 @@ export function autocomplete(inp, arr = countries) {
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
   /*execute a function when someone writes in the text field:*/
-  inp.addEventListener("input", function(e) {
+  inp.addEventListener('input', function (e) {
       /* k = Amount of coincedences */
       let a, b, i, k = 5;
       const val = this.value;
@@ -98,4 +98,4 @@ export function autocomplete(inp, arr = countries) {
 document.addEventListener("click", function (e) {
     closeAllLists(e.target);
 });
-} 
+}

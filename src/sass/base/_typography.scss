@@ -36,6 +36,133 @@ body{
 }
 
 
+// INDEX_SEARCH
+.index-search {
+
+
+	&__heading {
+		font-size: $largest-font-size-3;
+	}
+
+	&__tabs {
+		
+	}
+
+	&__tab {
+		text-transform: uppercase;
+		color: $color-secondary-dark;
+		font-size: $small-font-size;
+		letter-spacing: .1rem;
+	}
+
+	.form {
+		
+		&__selection-group {
+		
+		}
+
+		&__level{
+			
+		}
+
+		&__group-heading {
+			font-size: $default-font-size-2;
+			color: $color-secondary-light;
+		}
+
+		label {
+			color: $color-secondary-dark;
+		}
+
+		&__size {
+			
+		}
+
+		&__location-wrapper {
+			
+			div {
+			
+			}
+		}
+
+		&__location {
+			font-size: $default-font-size-2;
+			
+			& + div {
+				
+			}
+
+			&:focus {
+			
+				& + div {
+					
+				}
+			}
+		}
+
+		&__btn {
+			
+		}
+	}
+
+	&__content {
+	
+	}
+
+	&__jobs {
+		
+			
+		&-item {
+			.btn-text {
+				font-size: $default-font-size-2;
+			}
+		}
+
+		&-pin {
+			color: $color-white;
+			letter-spacing: .1rem;
+		}	
+
+		&-description {
+			& > * {
+				font-size: $default-font-size;
+			}
+		}
+
+		&-name {
+			color: $color-secondary-dark;
+		}
+
+		&-location {
+			& > * {
+				font-size: $default-font-size;
+			}
+		}
+	}
+
+	
+
+	&__company-name {
+		text-transform: uppercase;
+		letter-spacing: .1rem;
+		color: $color-grey-dark-1;
+	}
+
+	&__location-note {
+		text-transform: uppercase;
+		color: $color-grey-dark-1;
+	}
+
+	&__location {
+		color: $color-secondary-dark;
+	}
+
+	&__companies {
+
+	}
+}
+
+
 // NAVIGATION
 .page-nav{
 	&__container {
