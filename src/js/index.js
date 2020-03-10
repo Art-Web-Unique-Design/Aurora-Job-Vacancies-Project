@@ -25,3 +25,15 @@ elements.searchTabsContainer.addEventListener('click', e => {
 		const notActiveTab = e.target.closest('.index-search__tab');
 		toggleTab(notActiveTab);
 });
+
+console.log(elements.indexHeroStartButton);
+
+elements.indexHeroStartButton.addEventListener('click', e => {
+	e.preventDefault();
+	searchController(true);
+	elements.indexSearch.classList.toggle('index-search--reaction');
+});
+
+elements.indexSearchClose.addEventListener('click', () => {
+	elements.indexSearch.classList.toggle('index-search--reaction');
+});

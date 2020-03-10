@@ -18,6 +18,7 @@ export default class infoSearch {
 		}
 	}
 
+// Method where we can calculate number of pages that will be returned with server
 	async checkSize(query) {
 		this.i = 2;
 		let res_check = await axios(`https://www.themuse.com/api/public/${this.query}`);

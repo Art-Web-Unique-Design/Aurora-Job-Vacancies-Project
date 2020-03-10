@@ -38,10 +38,11 @@ body{
 
 // INDEX_SEARCH
 .index-search {
-
-
-	&__heading {
-		font-size: $largest-font-size-3;
+	
+	&__top {
+		&-heading {
+			font-size: $largest-font-size-3;
+		}
 	}
 
 	&__tabs {

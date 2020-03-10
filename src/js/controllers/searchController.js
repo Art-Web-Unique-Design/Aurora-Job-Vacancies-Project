@@ -2,7 +2,11 @@ import infoSearch from '../models/searchModel';
 import {elements} from '../views/base';
 import * as searchView from '../views/searchJobsView';
 
-export const searchController = async () => {
+export const searchController = async (flag = false) => {
+	// 0) Check if the start button is clicked in the index-hero section
+	if (flag)
+		searchView.putHeroInputs();
+
 	// 1) Get query from view
 	let query = searchView.getInput();
 
@@ -32,9 +36,9 @@ export const toggleTab = notActiveTab => {
 	{
 		/*elements.searchActiveTab.classList.toggle('index-search__tab--active');
 		notActiveTab.classList.toggle('index-search__tab--active');*/ // What's the difference here???
-		console.log(elements.searchActiveTab.innerHTML.textContent);
 		elements.searchTabs.forEach(cur => {
-			cur.classList.toggle('index-search__tab--active');
+			if(cur.classList.toggle('index-search__tab--active'))
+				searchView.renderForm(cur.innerHTML);
 		});
 		
 		//console.log('CHECKING');

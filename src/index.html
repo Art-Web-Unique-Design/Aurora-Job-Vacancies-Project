@@ -13,7 +13,9 @@
 <!--SECTION WHERE I WILL REACT TO THE QUERY-->
 	<div class="index-search">
 		<div class="index-search__top">
-			<h2 class="heading-secondary index-search__heading">Search Results</h2>
+			<div class="index-search__top-close"></div>
+
+			<h2 class="heading-secondary index-search__top-heading">Search Results</h2>
 
 			<div class="index-search__tabs">
 				<button class="index-search__tab index-search__tab--active">jobs</button><button class="index-search__tab">companies</button>
@@ -195,22 +197,22 @@
 							</h4>
 
 							<label for="internship_level">
-								<input id="internship_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="internship">
+								<input id="internship_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="Internship">
 								Internship
 							</label>
 
 							<label for="entry_level">
-								<input id="entry_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="entrylevel">
+								<input id="entry_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="Entry Level">
 								Entry Level
 							</label>
 
 							<label for="mid_level">
-								<input id="mid_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="midlevel">
+								<input id="mid_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="Mid Level">
 								Mid Level
 							</label>
 
 							<label for="senior_level">
-								<input id="senior_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="seniorlevel">
+								<input id="senior_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="Senior Level">
 								Senior Level
 							</label>
 					</div>
@@ -221,21 +223,21 @@
 						</h4>
 
 						<label>
-							<input type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" value="small">
+							<input type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" value="Small Size">
 							Small
 						</label>
 
 						<label for="size_medium">
-							<input id="size_medium" type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" class="index-hero__size-input" value="medium">
+							<input id="size_medium" type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" class="index-hero__size-input" value="Medium Size">
 							Medium
 						</label>
 
 						<label for="size_large">
-							<input id="size_large" type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" class="index-hero__size-input" value="large">
+							<input id="size_large" type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" class="index-hero__size-input" value="Large Size">
 							Large
 						</label>
 					</div>
-					<div class="form__location-wrapper form__selection-group">
+					<div class="form__location-wrapper">
 						<h4 class="heading-fourth form__group-heading">
 								Location
 						</h4>
@@ -243,7 +245,7 @@
 							<input id="location_select" type="text" class="form__location" placeholder="Choose Location" required>
 						</div>
 					</div>
-					<button class="form__btn btn btn--second">Start</button>
+					<button class="form__btn index-hero__form-btn btn btn--second">Start</button>
 				</form>
 
 			</div>
@@ -642,7 +644,7 @@
 	function onlyOne(checkbox, name) {
 	    let checkboxes = document.getElementsByName(name);
 	    checkboxes.forEach((item) => {
-	        if (item !== checkbox) item.checked = false
+	        if (item !== checkbox) item.checked = false;
 	    })
 	}
 </script>

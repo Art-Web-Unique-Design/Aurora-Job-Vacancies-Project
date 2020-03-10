@@ -10,6 +10,157 @@
 	<title>Aurora</title>
 </head>
 <body>
+<!--SECTION WHERE I WILL REACT TO THE QUERY-->
+	<div class="index-search">
+		<div class="index-search__top">
+			<div class="index-search__top-close"></div>
+
+			<h2 class="heading-secondary index-search__top-heading">Search Results</h2>
+
+			<div class="index-search__tabs">
+				<button class="index-search__tab index-search__tab--active">jobs</button><button class="index-search__tab">companies</button>
+			</div>
+		</div>
+		
+<!--*****************************REACTION FORM*****************************-->
+		<form id="reaction-form" class="form" autocomplete="off">
+					<div class="form__location-wrapper">
+						<h4 class="heading-fourth form__group-heading">
+								Location
+						</h4>
+						<div class="autocomplete">
+							<input id="reaction-location_select" type="text" class="form__location" placeholder="Choose Location" required>
+						</div>
+					</div>
+					<div class="form__level form__selection-group">
+							<h4 class="heading-fourth form__group-heading">
+								Job Level
+							</h4>
+
+							<label for="reaction-internship_level">
+								<input id="reaction-internship_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="Internship">
+								Internship
+							</label>
+
+							<label for="reaction-entry_level">
+								<input id="reaction-entry_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="Entry Level">
+								Entry Level
+							</label>
+
+							<label for="reaction-mid_level">
+								<input id="reaction-mid_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="Mid Level">
+								Mid Level
+							</label>
+
+							<label for="reaction-senior_level">
+								<input id="reaction-senior_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="Senior Level">
+								Senior Level
+							</label>
+					</div>
+
+					<div class="form__size form__selection-group">
+						<h4 class="heading-fourth form__group-heading">
+								Company Size
+						</h4>
+
+						<label>
+							<input type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" value="Small Size">
+							Small
+						</label>
+
+						<label for="reaction-size_medium">
+							<input id="reaction-size_medium" type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" class="index-hero__size-input" value="Medium Size">
+							Medium
+						</label>
+
+						<label for="reaction-size_large">
+							<input id="reaction-size_large" type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" class="index-hero__size-input" value="Large Size">
+							Large
+						</label>
+					</div>
+					<button class="form__btn btn btn--second">Start</button>
+			</form>
+<!--*************************************************************************************-->
+			<div class="index-search__content">
+				<div class="index-search__jobs">
+					<!--<div class="index-search__jobs-item">
+						<span class="index-search__jobs-pin">SAVE</span>
+						<div class="index-search__jobs-description">
+							<h4 class="heading-fourth index-search__company-name">Transunion</h4>
+							<p class="index-search__jobs-name">Sr.Infrastructure Engineer - iovation</p>
+						</div>
+						
+						<div class="index-search__jobs-location">
+							<h4 class="heading-fourth index-search__location-note">This job is in</h4>
+							<p class="index-search__location">Portland, OR</p>
+						</div>
+						<a href="#" class="btn-text btn-text--second">View Full Posting</a>
+					</div>
+
+					<div class="index-search__jobs-item">
+						<span class="index-search__jobs-pin">SAVE</span>
+						<div class="index-search__jobs-description">
+							<h4 class="heading-fourth index-search__company-name">Transunion</h4>
+							<p class="index-search__jobs-name">Sr.Infrastructure Engineer - iovation</p>
+						</div>
+						
+						<div class="index-search__jobs-location">
+							<h4 class="heading-fourth index-search__location-note">This job is in</h4>
+							<p class="index-search__location">Portland, OR</p>
+						</div>
+						<a href="#" class="btn-text btn-text--second">View Full Posting</a>
+					</div>
+
+					<div class="index-search__jobs-item">
+						<span class="index-search__jobs-pin">SAVE</span>
+						<div class="index-search__jobs-description">
+							<h4 class="heading-fourth index-search__company-name">Transunion</h4>
+							<p class="index-search__jobs-name">Sr.Infrastructure Engineer - iovation</p>
+						</div>
+						
+						<div class="index-search__jobs-location">
+							<h4 class="heading-fourth index-search__location-note">This job is in</h4>
+							<p class="index-search__location">Portland, OR</p>
+						</div>
+						<a href="#" class="btn-text btn-text--second">View Full Posting</a>
+					</div>
+
+					<div class="index-search__jobs-item">
+						<span class="index-search__jobs-pin">SAVE</span>
+						<div class="index-search__jobs-description">
+							<h4 class="heading-fourth index-search__company-name">Transunion</h4>
+							<p class="index-search__jobs-name">Sr.Infrastructure Engineer - iovation</p>
+						</div>
+						
+						<div class="index-search__jobs-location">
+							<h4 class="heading-fourth index-search__location-note">This job is in</h4>
+							<p class="index-search__location">Portland, OR</p>
+						</div>
+						<a href="#" class="btn-text btn-text--second">View Full Posting</a>
+					</div>
+
+					<div class="index-search__jobs-item">
+						<span class="index-search__jobs-pin">SAVE</span>
+						<div class="index-search__jobs-description">
+							<h4 class="heading-fourth index-search__company-name">Transunion</h4>
+							<p class="index-search__jobs-name">Sr.Infrastructure Engineer - iovation</p>
+						</div>
+						
+						<div class="index-search__jobs-location">
+							<h4 class="heading-fourth index-search__location-note">This job is in</h4>
+							<p class="index-search__location">Portland, OR</p>
+						</div>
+						<a href="#" class="btn-text btn-text--second">View Full Posting</a>
+					</div>-->
+				</div>
+
+				<div class="index-search__companies">
+					<div class="index-search__companies-item">
+						
+					</div>
+				</div>
+			</div>
+	</div>
 	
 	<nav class="page-nav">
 		<div class="page-nav__container">
@@ -39,29 +190,29 @@
 
 				<p class="index-hero__text u-margin-bottom-medium">Offer and Apply Different Vacancies Online</p>
 
-				<form action="---" class="form" autocomplete="off">
+				<form class="form" autocomplete="off">
 					<div class="form__level form__selection-group">
 							<h4 class="heading-fourth form__group-heading">
 								Job Level
 							</h4>
 
 							<label for="internship_level">
-								<input id="internship_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="internship">
+								<input id="internship_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="Internship">
 								Internship
 							</label>
 
 							<label for="entry_level">
-								<input id="entry_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="entrylevel">
+								<input id="entry_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="Entry Level">
 								Entry Level
 							</label>
 
 							<label for="mid_level">
-								<input id="mid_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="midlevel">
+								<input id="mid_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="Mid Level">
 								Mid Level
 							</label>
 
 							<label for="senior_level">
-								<input id="senior_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="seniorlevel">
+								<input id="senior_level" type="checkbox" name="job_level" onclick="onlyOne(this, this.name)" value="Senior Level">
 								Senior Level
 							</label>
 					</div>
@@ -72,29 +223,29 @@
 						</h4>
 
 						<label>
-							<input type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" value="small">
+							<input type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" value="Small Size">
 							Small
 						</label>
 
 						<label for="size_medium">
-							<input id="size_medium" type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" class="index-hero__size-input" value="medium">
+							<input id="size_medium" type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" class="index-hero__size-input" value="Medium Size">
 							Medium
 						</label>
 
 						<label for="size_large">
-							<input id="size_large" type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" class="index-hero__size-input" value="large">
+							<input id="size_large" type="checkbox" name="company_size" onclick="onlyOne(this, this.name)" class="index-hero__size-input" value="Large Size">
 							Large
 						</label>
 					</div>
-					<div class="form__location-wrapper form__selection-group">
+					<div class="form__location-wrapper">
 						<h4 class="heading-fourth form__group-heading">
 								Location
 						</h4>
 						<div class="autocomplete">
-							<input id="location_select" type="text" class="form__location" placeholder="City" required>
+							<input id="location_select" type="text" class="form__location" placeholder="Choose Location" required>
 						</div>
 					</div>
-					<button class="form__btn btn btn--second">Start</button>
+					<button class="form__btn index-hero__form-btn btn btn--second">Start</button>
 				</form>
 
 			</div>
@@ -149,9 +300,9 @@
 			<div class="index-find__container">
 				<!--FIRST NEW VACANCIES-->
 				<p class="index-find__sub-head sub-head">Find The Most Suitable Jobs</p>
-				<h2 class="red-underline heading-secondary index-find__heading u-margin-bottom-big">Newest This Month</h2>
-				<div class="index-find__cards cards index-find__cards--first u-margin-bottom-huge">
-					<div class="index-find__card card">
+				<h2 class="red-underline heading-secondary index-find__heading u-margin-bottom-big">Newest This Year</h2>
+				<div class="index-find__cards cards index-find__cards--first u-margin-bottom-huge cards-jobs">
+					<!--<div class="index-find__card card">
 						<img src="./img/computer_science.jpg" alt="work offer" class="index-find__card-img card__img">
 						<span class="index-find__card-type card__type--pink card__type">NEW</span>
 						<a href="#">
@@ -252,14 +403,14 @@
 								</p>
 							</div>
 						</a>
-					</div>
+					</div>-->
 				</div>
 
 
 				<p class="index-find__sub-head sub-head">Innovative Companies</p>
 				<h2 class="red-underline heading-secondary index-find__heading u-margin-bottom-big">The Aurora Team Picks</h2>
-				<div class="index-find__cards cards cards--second u-margin-bottom-big">
-					<div class="index-find__card card">
+				<div class="index-find__cards cards u-margin-bottom-big cards-companies">
+					<!--<div class="index-find__card card">
 						<img src="./img/laptop-meeting.jpg" alt="work offer" class="index-find__card-img card__img">
 						<a href="#">
 							<div class="index-find__card-content card__content">
@@ -330,7 +481,7 @@
 								</p>
 							</div>
 						</a>
-					</div>
+					</div>-->
 			</div>	
 				<a href="#" class="index-find__link btn btn--second">Show all listing</a>
 		</section>
@@ -491,9 +642,9 @@
 <script type="text/javascript" src="js/bundle.js"></script></body>
 <script>
 	function onlyOne(checkbox, name) {
-	    let checkboxes = document.getElementsByName(name)
+	    let checkboxes = document.getElementsByName(name);
 	    checkboxes.forEach((item) => {
-	        if (item !== checkbox) item.checked = false
+	        if (item !== checkbox) item.checked = false;
 	    })
 	}
 </script>

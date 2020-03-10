@@ -5,15 +5,32 @@ const checkedCheckbox = checkboxes => {
 	for(let i = 0; i < checkboxes.length; i++)
 	{
         if (checkboxes[i].checked == true) {
-        	console.log(checkboxes[i].value);
-        	return checkboxes[i].value;
+			console.log(checkboxes[i].value);
+			return checkboxes[i].value;
         }
 	}
+	
 };
 
+/***************** If start button was clicked in index-hero section. ***********************/
+const compareAndPutCheckboxes = (checkboxes, checkedCheckboxValue) => {
+	checkboxes.forEach(cur => {
+		if (cur.value == checkedCheckboxValue)
+			cur.checked = true;
+	})
+}
+
+export const putHeroInputs = () => {
+	compareAndPutCheckboxes(elements.searchFormJobsCheckboxes,checkedCheckbox(elements.indexHeroFormJobsCheckboxes));
+	compareAndPutCheckboxes(elements.searchFormCompaniesCheckboxes,checkedCheckbox(elements.indexHeroFormCompaniesCheckboxes));
+	elements.reactLocation.value = elements.indexHeroLocation.value;
+
+}
+/************* END If start button was clicked in index-hero section. *******************/
+
 export const getInput = () => {
-	let jobLevelCheckbox = checkedCheckbox(document.getElementsByName('job_level'));
-	let companySizeCheckbox = checkedCheckbox(document.getElementsByName('company_size'));
+	let jobLevelCheckbox = checkedCheckbox(elements.searchFormJobsCheckboxes);
+	let companySizeCheckbox = checkedCheckbox(elements.searchFormCompaniesCheckboxes);
 	let locationValue = elements.reactLocation.value;
 
 	const query = `jobs?level=${jobLevelCheckbox}&company_size=${companySizeCheckbox}&location=${locationValue}&page=1`;
@@ -54,3 +71,25 @@ export const renderResults = (jobs, page = 1, resPerPage = 20) => {
 	// render pagination buttons
 	//renderButtons(page, jobs.length, resPerPgage);
 };
+
+/**********************Part where we react on tabs changing************************/
+const clearPutSelectionGroups = (flag) => {
+	if (flag)
+		elements.formSelectionGroups.forEach(cur => {
+			cur.style.display = "none";
+		});
+	else
+		elements.formSelectionGroups.forEach(cur => {
+			cur.style.display = "grid";
+		});
+}
+
+//IF we put true flag we clear else we put selection groups
+export const renderForm = tab => {
+	if (tab === 'companies')
+		clearPutSelectionGroups(true);
+	else if (tab === 'jobs')
+		clearPutSelectionGroups(false);
+	
+}
+/**********************End of the part where we react on tabs changing************************/

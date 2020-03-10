@@ -1,0 +1,26 @@
+// FALLING ANIMATION EFFECTS
+@keyframes falling {
+	0% {
+		top: -100%;
+	}
+
+	20% {
+		top: -80%;
+	}
+
+	40% {
+		top: -60%;
+	}
+
+	60% {
+		top: -40%;
+	}
+
+	80% {
+		top: -20%;
+	}
+
+	100% {
+		top: 0;
+	}
+}

@@ -1,17 +1,59 @@
 .index-search {
 	justify-items: center;
+	position: fixed;
+	z-index: 1000;
+	display: none;
+	height: 100%;
+	width: 100%;
+
+	//For Falling animation effect
+	&--reaction {
+		display: grid;
+		animation: falling .3s cubic-bezier(.72,1.05,.88,.77);
+		animation-fill-mode: forwards; 
+	}
 
 	&__top {
 		grid-column: 1 / -1;
 		width: 100%;
+		align-self: start;
 		//border: 2px ridge orangered;
 		padding: 3rem 0 0 2.5rem;
 		box-shadow: $primary-shadow-light;
+		background-color: $color-white;
+		position: relative;
+
+		&-close {
+			position: absolute;
+			top: 0;
+			left: 90%;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 4rem;
+			height: 4rem;
+			cursor: pointer;
+
+			&::before,
+			&::after{
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform:translateX(-.6rem) rotate(45deg);
+				width: 5rem;
+				border-bottom: .2rem solid $color-primary;
+			}
+
+			&::after {
+				transform:translateX(-.6rem) rotate(-45deg);
+			}
+		}
+
+		&-heading {
+
+		}
 	}
 
-	&__heading {
-
-	}
+	
 
 	&__tabs {
 		margin-left: 2rem;
@@ -55,6 +97,7 @@
 		width: 100%;
 		//border: 1px solid red;
 		box-shadow: $primary-shadow-light;
+		background-color: $color-white;
 
 		&__selection-group {
 			display: grid;
@@ -127,6 +170,8 @@
 		background-color: $color-grey-light;
 		width: 100%;
 		grid-column: 3 / -1;
+		height: 83vh;
+		overflow-y: scroll;
 	}
 
 	&__jobs {
