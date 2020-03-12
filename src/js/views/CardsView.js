@@ -105,7 +105,7 @@ const renderCard = (card, typeOfCard, img_num = 0) => {
 	}
 }
 
-export const renderResults = (cards, typeOfCard, img_num, page = 1) => {
+export const renderResults = (cards, typeOfCard, img_num) => {
 	const startIndex = inpRand(0, 18);
 	const startIndexCompanies = inpRand(0, 16);
 

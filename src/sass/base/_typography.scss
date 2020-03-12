@@ -160,6 +160,52 @@ body{
 
 	&__companies {
 
+		&-item {
+
+		}
+
+		&-img {
+			
+		}
+
+		&-content {
+			
+		}
+
+		&-name {
+			text-transform: uppercase;
+			font-size: $large-font-size-1;
+			font-weight: $medium-font-weight;
+			letter-spacing: .2rem;
+			color: $color-grey-dark-3;
+		}
+
+		&-description {
+			color: $color-secondary-dark;
+		}
+	}
+
+	&__btn {
+		font-size: $default-font-size;
+
+		&--prev,
+		&--next {
+			color: white;
+			font-size: $small-font-size;
+		}
+
+
+		&--prev {
+			
+		}
+
+		&--next {
+			
+		}
+	}
+
+	&__content-nums {
+
 	}
 }
 

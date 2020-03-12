@@ -1,31 +1,40 @@
 import infoSearch from '../models/searchModel';
-import {elements} from '../views/base';
-import * as searchView from '../views/searchJobsView';
+import { elements, renderLoader, clearLoader } from '../views/base';
+import * as searchView from '../views/searchJobsCompaniesView';
 
-export const searchController = async (flag = false) => {
+// Variable to detect numbers of page after first load of result
+let searchResNumPages = 1;
+
+export const searchController = async (flag = false, page = 1, findPagesFlag = 0) => {
 	// 0) Check if the start button is clicked in the index-hero section
 	if (flag)
 		searchView.putHeroInputs();
 
-	// 1) Get query from view
-	let query = searchView.getInput();
+	// 1) Get and build query from view it depends on companies or jobs we search for
+	let query = searchView.getInput(page);
+	console.log(query);
 
 	if (query) {
 		// 2) New search object
-		const search = new infoSearch(query);
+		const search = new infoSearch(query, findPagesFlag);
 
 		// 3) Prepare UI for results
 		searchView.clearResults();
-
+		renderLoader(elements.searchContentWindow);
 		try {
 			// 4) Search for jobs
 			await search.getResults();
 			await search.checkSize();
 
 			// 5) Render results on UI
-			searchView.renderResults(search.result);
+			clearLoader();
+			if (findPagesFlag)
+				searchResNumPages = search.resNumPages;
+			searchView.renderResults(search.result, page, searchResNumPages);
+			console.log('ResNumPages: '+searchResNumPages)
 		} catch (err) {
 			alert(err + 'Something wrong with the controlSearch...');
+			clearLoader()
 		}
 	}
 };
@@ -42,5 +51,7 @@ export const toggleTab = notActiveTab => {
 		});
 		
 		//console.log('CHECKING');
+		return true;
 	}
+	return 0;
 }

@@ -1,8 +1,9 @@
 import axios from 'axios';
 
 export default class infoSearch {
-	constructor(query) {
+	constructor(query, i = 0) {
 		this.query = query;
+		this.i = i;
 	}
 
 	//Async method
@@ -20,15 +21,18 @@ export default class infoSearch {
 
 // Method where we can calculate number of pages that will be returned with server
 	async checkSize(query) {
-		this.i = 2;
-		let res_check = await axios(`https://www.themuse.com/api/public/${this.query}`);
-		while(res_check.data.results.length != 0 && this.i < 21)
-		{
-			res_check = await axios(`https://www.themuse.com/api/public/${this.query.replace(/[1-9]+$/gi, this.i)}`);
-			console.log(res_check.data.results);
-			console.log(this.i);
-			this.i++;
+		if (this.i === 1) {
+			let res_check = await axios(`https://www.themuse.com/api/public/${this.query.replace(/[1-9]+$/gi, this.i)}`);
+			while(res_check.data.results.length != 0 && this.i < 14)
+			{
+				res_check = await axios(`https://www.themuse.com/api/public/${this.query.replace(/[1-9]+$/gi, this.i)}`);
+				console.log(res_check.data.results);
+				console.log(this.i);
+				this.i++;
+			}
+			this.i = this.i - 2;
+			this.resNumPages = this.i;
 		}
-		this.i--;
+
 	}
 }

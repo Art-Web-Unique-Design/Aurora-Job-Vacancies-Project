@@ -170,7 +170,7 @@
 		background-color: $color-grey-light;
 		width: 100%;
 		grid-column: 3 / -1;
-		height: 83vh;
+		height: calc(100vh - 13.1rem);
 		overflow-y: scroll;
 	}
 
@@ -200,9 +200,10 @@
 			left: 100%;
 			top: .8rem;
 			cursor: pointer;
-			padding: .1rem 2.2rem .1rem .7rem;
+			padding: .3rem .7rem .1rem .7rem;
 			transform: translateX(-85%);
 			box-shadow: $primary-shadow-light;
+			display: flex;
 
 			&:after{
 				content: "";
@@ -213,7 +214,16 @@
 				border-left: 1rem solid $color-grey-dark-2;
 				border-bottom: 1rem solid transparent;
 			}
-		}	
+		}
+
+		&-icon {
+			height: $default-font-size-2;
+			width: $default-font-size-2;
+			fill: currentColor;
+			align-self: baseline;
+			margin-left: .2rem;
+
+		}
 
 		&-description {
 
@@ -243,6 +253,96 @@
 	}
 
 	&__companies {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min-content, 36rem));
+		justify-content: center;
+		grid-row-gap: $row-gap-1;
+		grid-column-gap: $column-gap-1;
+		padding-top: $small-row-gap;
+		overflow: hidden;
+		margin-bottom: 3rem;
 
+		&-item {
+			background-color: $color-white;
+			display: grid;
+			grid-template-rows: minmax(10rem, 40rem);
+			border-bottom: .3rem solid $color-primary;
+			border-radius: $primary-border-radius;
+			box-shadow: $primary-shadow;
+		}
+
+		&-img {
+			width: 100%;
+			grid-row: 1 / -1;
+			grid-column: 1 / -1;
+		}
+
+		&-content {
+			grid-row: 1 / -1;
+			grid-column: 1 / -1;
+			position: relative;
+			padding: 1.5rem;
+			align-self: end;
+			background-color: $color-white;
+		}
+
+		&-name {
+			margin-bottom: 1rem;
+		}
+
+		&-description {
+			margin-bottom: .8rem;
+		}
+	}
+
+	&__content-pages {
+		width: 64%;
+		padding: 1rem 0 1rem 2rem;
+		display: flex;
+	}
+
+	&__btn {
+
+		&--prev,
+		&--next {
+			border-radius: 3rem;
+			color: $color-white;
+			background-color: $color-secondary;
+			display: flex;
+			width: 8rem;
+			align-items: center;
+			justify-content: center;
+			transition: $faster-main-transition;
+
+			&:hover {
+				background-color: lighten($color-secondary, 7%);
+			}
+
+		}
+
+
+		&--prev {
+			
+		}
+
+		&--next {
+			margin-left: auto;
+		}
+	}
+
+	&__content-nums {
+		display: inline-block;
+		margin: 0 auto;
+		
+		button:not(:last-child){
+			margin-right: 1.3rem;
+		}
+	}
+
+	&__icon {
+
+		&--left{
+			transform: rotate(180deg);
+		}
 	}
 }
