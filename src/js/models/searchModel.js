@@ -9,11 +9,11 @@ export default class infoSearch {
 	//Async method
 	async getResults(query) {
 		try{
-			console.log(this.query);
+			//console.log(this.query);
 			const res = await axios(`https://www.themuse.com/api/public/${this.query}`);
 			this.result = res.data.results;
-			console.log(this.result.length);
-			console.log(this.result);
+			/*console.log(this.result.length);
+			console.log(this.result);*/
 		} catch (error) {
 			alert(error);
 		}
@@ -23,11 +23,11 @@ export default class infoSearch {
 	async checkSize(query) {
 		if (this.i === 1) {
 			let res_check = await axios(`https://www.themuse.com/api/public/${this.query.replace(/[1-9]+$/gi, this.i)}`);
-			while(res_check.data.results.length != 0 && this.i < 14)
+			while(res_check.data.results.length != 0 && this.i < 9)
 			{
 				res_check = await axios(`https://www.themuse.com/api/public/${this.query.replace(/[1-9]+$/gi, this.i)}`);
-				console.log(res_check.data.results);
-				console.log(this.i);
+				/*console.log(res_check.data.results);
+				console.log(this.i);*/
 				this.i++;
 			}
 			this.i = this.i - 2;

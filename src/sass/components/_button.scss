@@ -90,3 +90,11 @@
 			}
 	}
 }
+
+// DISABLED BUTTONS
+.disabled-btn {
+	opacity: 0.8;
+	cursor: default;
+	transform: translateY(0);
+	box-shadow: none !important;
+}

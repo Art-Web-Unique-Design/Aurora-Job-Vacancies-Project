@@ -5,10 +5,10 @@
 	grid-gap: $smallest-row-gap;
 }
 
-.index-hero{
+.index-hero {
 	background-image:  url(/img/index-hero-bg-small-2.png);
 	background-repeat: repeat-x;
-	background-position: bottom;
+	background-position: 50% 100%;
 	height: 75vh;
 
 	&__container{
@@ -21,24 +21,75 @@
 	
 	&__heading{
 		color: $color-secondary;
+		text-align: center;
 	}
 
 	&__text{
 		color: $color-secondary-dark;
+		text-align: center;
 	}
 
-	.form{
-		padding: .6rem 1.6rem;
+	#index-hero__form-toggle {
+		display: none;
+	}
+
+	&__form {
+		&-toggle {
+			display: none;
+
+			@media only screen and (max-width: $bp-11) {
+				display: inherit;
+			}
+
+			@media only screen and (max-width: $bp-13) {
+				padding: $form-padding;
+			}
+
+			@media only screen and (max-width: $bp-17-1) {
+				padding: $form-padding-1;
+			}
+		}
+	}
+
+	#index-hero__form-toggle:checked ~ .form {
+		display: flex;
+	}
+
+	.form {
+		padding: 1rem 1.6rem;
 		background-color: $color-white;
 		display: flex;
 		align-items: flex-start;
 		border-radius: $primary-border-radius-1;
 		box-shadow: $primary-shadow;
+
+		@media only screen and (max-width: $bp-11) {
+			display: none;
+			flex-direction: column;
+			align-items: center;
+			padding: 1.6rem 3.5rem;
+			margin-top: -1.5rem;
+		}
+
+		@media only screen and (max-width: $bp-13) {
+			margin-top: -1.5rem;
+			padding: $form-padding;
+			z-index: 100;
+		}
+
+		@media only screen and (max-width: $bp-17-1) {
+				padding: $form-padding-1;
+			}
 		
 		& > *:not(:last-child)
 		{
 			position: relative;
 			margin-right: $column-gap;
+
+			@media only screen and (max-width: $bp-11) {
+				margin-right: 0;
+				margin-bottom: $row-gap-1;
+			}
 
 			&::after{
 				content: "";
@@ -46,6 +97,15 @@
 				position: absolute;
 				height: 9rem;
 				border-right: .1rem solid $color-grey-dark;
+
+				@media only screen and (max-width: $bp-11) {
+					left: 0;
+					top: 120%;
+					border-right: none;
+					height: 0;
+					width: 100%;
+					border-bottom: .1rem solid $color-grey-dark;
+				}
 			}
 		}
 
@@ -79,7 +139,7 @@
 			}
 		}
 
-		&__location{
+		&__location {
 			outline: none;
 			padding: .4rem 1rem;
 			border: 1px solid $color-grey-dark;
@@ -88,6 +148,12 @@
 			transition: $faster-main-transition;
 			width: 90%;
 			z-index: 100;
+
+
+			@media only screen and (max-width: $bp-11) {
+				margin-right: 0;
+				padding: .6rem 1rem;
+			}
 			
 			& + div {
 				width: 90%;
@@ -104,7 +170,7 @@
 
 		&__btn{
 			align-self: center;
+			width: 100%;
 		}
 	}
-
 }

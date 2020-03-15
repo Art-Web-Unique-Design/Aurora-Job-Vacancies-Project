@@ -1,12 +1,9 @@
 .index-cta{
 	position: relative;
-
-	&__bg-img{
-		position: absolute;
-		z-index: -1;
-		top: -25vh;
-		height: 157%;
-	}
+	background-image: url(/img/svg/cta-bg.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
 
 	&__container{
 		grid-column: 4 / 10;

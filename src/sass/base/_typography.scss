@@ -11,6 +11,17 @@ body{
 	font-size: $largest-font-size;
 	font-weight: $medium-font-weight;
 	backface-visibility: hidden; /*убирает маленький рывок после анимации */
+	@media only screen and (max-width: $bp-13) {
+		font-size: $largest-font-size-1;
+	}
+
+	@media only screen and (max-width: $bp-14-1) {
+		font-size: $largest-font-size-2;
+	}
+
+	@media only screen and (max-width: $bp-15-1) {
+		font-size: $largest-font-size-3;
+	}
 }
 
 .heading-secondary{
@@ -18,6 +29,18 @@ body{
 	color: $color-secondary;
 	font-weight: $small-font-weight;
 	letter-spacing: $small-letter-space;
+
+	@media only screen and (max-width: $bp-13) {
+		font-size: $largest-font-size-3 !important;
+	}
+
+	@media only screen and (max-width: $bp-14-1) {
+		font-size: $largest-font-size-4 !important;
+	}
+
+	@media only screen and (max-width: $bp-15-1) {
+		font-size: $largest-font-size-5 !important;
+	}
 }
 
 .heading-tertiary {
@@ -33,6 +56,18 @@ body{
 .sub-head{
 	font-size: $large-font-size;
 	color: $color-grey-dark;
+
+	@media only screen and (max-width: $bp-13) {
+		font-size: $large-font-size-1 !important;
+	}
+
+	@media only screen and (max-width: $bp-14-1) {
+		font-size: $large-font-size-2 !important;
+	}
+
+	@media only screen and (max-width: $bp-15-1) {
+		font-size: $large-font-size-3 !important;
+	}
 }
 
 
@@ -57,6 +92,14 @@ body{
 	}
 
 	.form {
+
+		&__heading {
+
+			&-close {
+				font-size: $default-font-size-3;
+				color: $color-grey-dark-3;
+			}
+		}
 		
 		&__selection-group {
 		
@@ -107,7 +150,10 @@ body{
 	}
 
 	&__content {
-	
+		&-heading {
+			font-size: $default-font-size-3;
+			color: $color-grey-dark-1;
+		}
 	}
 
 	&__jobs {
@@ -188,6 +234,10 @@ body{
 	&__btn {
 		font-size: $default-font-size;
 
+		@media only screen and (max-width: $bp-16) {
+			font-size: $small-font-size;
+		}
+
 		&--prev,
 		&--next {
 			color: white;
@@ -205,7 +255,7 @@ body{
 	}
 
 	&__content-nums {
-
+		
 	}
 }
 
@@ -264,6 +314,18 @@ body{
 	&__text{
 		font-size: $medium-font-size;
 		font-weight: $small-font-weight;
+
+		@media only screen and (max-width: $bp-13) {
+			font-size: $large-font-size-2;
+		}
+
+		@media only screen and (max-width: $bp-14-1) {
+			font-size: $large-font-size-3;
+		}
+
+		@media only screen and (max-width: $bp-15-1) {
+			font-size: $default-font-size-3;
+		}
 	}
 
 	.form{

@@ -8,7 +8,7 @@ const checkedCheckbox = checkboxes => {
 	for(let i = 0; i < checkboxes.length; i++)
 	{
         if (checkboxes[i].checked == true) {
-			console.log(checkboxes[i].value);
+			//console.log(checkboxes[i].value);
 			return checkboxes[i].value;
         }
 	}
@@ -150,6 +150,22 @@ const renderButtons = (page, pages) => {
 	elements.searchPaginationContainer.insertAdjacentHTML('afterbegin', button);
 }
 /*************************END of Rendering Buttons***********************/
+// Render search content heading flag === true means jobs else companies
+export const clearContentLocationHeading = () => {
+	let el = document.querySelector('.index-search__content-heading');
+	if (el)
+		el.parentNode.removeChild(el);
+}
+
+export const renderContentLocationHeading = (type = 'jobs') => {
+	if (elements.reactLocation.value != '')
+	{
+		elements.searchContentWindow.insertAdjacentHTML('afterbegin', `
+			<p class="index-search__content-heading">All ${type} in ${elements.reactLocation.value}</p>
+		`);
+	}
+		
+}
 
 export const renderResults = (result, page = 1, resultsNum = 1) => {
 	// render results of current page
@@ -162,7 +178,7 @@ export const renderResults = (result, page = 1, resultsNum = 1) => {
 	// render pagination buttons
 	console.log(page + ' - ' + resultsNum);
 	if(resultsNum >= page && resultsNum > 1)
-	renderButtons(page, resultsNum);
+		renderButtons(page, resultsNum);
 };
 
 /**********************Part where we react on tabs changing************************/
@@ -191,3 +207,21 @@ export const renderForm = tab => {
 	}
 }
 /**********************End of the part where we react on tabs changing************************/
+
+
+/**********************Part where we Disable/Enable searching start buttons************************/
+
+
+export const disableButtons = buttons => buttons.forEach(cur => {
+	cur.setAttribute("disabled", "");
+	cur.classList.add("disabled-btn");
+});
+
+export const enableButtons = buttons => buttons.forEach(cur => {
+	cur.removeAttribute("disabled");
+	cur.classList.remove("disabled-btn");
+});
+
+
+
+/******************End of Part where we Disable/Enable searching start buttons********************/

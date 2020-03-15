@@ -12,7 +12,15 @@ html {
 
 	overflow-x: hidden;
 
+	@media only screen and (max-width: $bp-8) {
+		font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%;
+	}
+
+	@media only screen and (max-width: $bp-18) {
+		overflow-x: auto;
+	}
+
 	body{
-		max-width: 100vw;
+		width: 100vw;
 	}
 }

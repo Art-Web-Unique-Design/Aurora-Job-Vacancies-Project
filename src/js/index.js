@@ -1,4 +1,3 @@
-import '../sass/main.scss';
 import { elements } from './views/base';
 import { autocomplete } from './autocomplete/Autocomplete';
 
@@ -14,6 +13,7 @@ autocomplete(document.getElementById('location_select'));
 autocomplete(document.getElementById('reaction-location_select'));
 /*****-----------------------********************************/
 
+// Controller which displays cards in the main section
 cardsController();
 
 elements.searchForm.addEventListener('submit', e => {
@@ -41,14 +41,26 @@ elements.indexSearchClose.addEventListener('click', () => {
 	elements.indexSearch.classList.toggle('index-search--reaction');
 });
 
+// Reaction form visibility
+elements.searchHeadingCog.addEventListener('click', () => {
+	elements.searchForm.style.display = 'inline-block';
+});
+
+elements.searchHeadingFormClose.addEventListener('click', () => {
+	elements.searchForm.style.display = 'none';
+	searchController(true, 1, 1);
+});
+
 // PAGINATION ALGORYTHM
 elements.searchPaginationContainer.addEventListener('click', e => {
 	const btn = e.target.closest('.btn-inline');
-	console.log(btn);
+	//console.log(btn);
 	if (btn) {
 		const goToPage = parseInt(btn.dataset.goto, 10);
-		console.log('GOTOPAGE= ' + goToPage)
+		//console.log('GOTOPAGE= ' + goToPage)
 		searchView.clearResults();
 		searchController(false, goToPage);
 	}
 });
+
+///////////////////////////////////////  QUESTION!!! HOW TO STOP FUNCTION FROM ANOTHER FUNCTION PROBLEM HERE IN searchHeadingFormClose:document.querySelector('.form__heading-close'), LOOK IN searchController!!!!  ////////////////////////////////////////

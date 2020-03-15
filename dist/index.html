@@ -7,6 +7,8 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
 
+	<link rel="stylesheet" href="css/index.css" type="text/css">
+
 	<title>Aurora</title>
 </head>
 <body>
@@ -15,7 +17,13 @@
 		<div class="index-search__top">
 			<div class="index-search__top-close"></div>
 
-			<h2 class="heading-secondary index-search__top-heading">Search Results</h2>
+			<div class="index-search__heading-wrapper">
+				<h2 class="heading-secondary index-search__top-heading">Search Results</h2>
+				<svg class="index-search__heading-icon">
+		            <use xlink:href="img/symbol-defs.svg#icon-cog"></use>
+		        </svg>
+			</div>
+			
 
 			<div class="index-search__tabs">
 				<button class="index-search__tab index-search__tab--active">jobs</button><button class="index-search__tab">companies</button>
@@ -24,6 +32,12 @@
 		
 <!--*****************************REACTION FORM*****************************-->
 		<form id="reaction-form" class="form" autocomplete="off">
+					<div class="form__heading">
+						<!--<h2 class="heading-secondary form__heading-jobs">Filter Jobs</h2>-->
+						<h2 class="heading-secondary form__heading-companies">Filter Companies</h2>
+						<button class="form__heading-close">CLOSE</button>
+					</div>
+
 					<div class="form__location-wrapper">
 						<h4 class="heading-fourth form__group-heading">
 								Location
@@ -60,7 +74,7 @@
 
 					<div class="form__size form__selection-group">
 						<h4 class="heading-fourth form__group-heading">
-								Company Size
+								Company&nbsp;Size
 						</h4>
 
 						<label>
@@ -82,6 +96,8 @@
 			</form>
 <!--*************************************************************************************-->
 			<div class="index-search__content">
+				<!--<p class="index-search__content-heading">All Jobs in London</p>-->
+
 				<div class="index-search__jobs">
 					<!--<div class="index-search__jobs-item">
 						<span class="index-search__jobs-pin">
@@ -324,32 +340,50 @@
 	</div>
 	
 	<nav class="page-nav">
-		<div class="page-nav__container">
-			<div class="page-nav__item page-nav__item-logo">
-				<a href="#"><img class="page-nav__item-img" src="img/logo.png" alt="LOGO"></a>
-			</div>
-			<div class="page-nav__item">
-				<ul class="page-nav__item-list">
-					<li class="page-nav__list-item"><a href="#" class=" page-nav__item-link">Find a job</a></li>
-					<li class="page-nav__list-item"><a href="#" class=" page-nav__item-link">Offer a vacancy</a></li>
-				</ul>
-			</div>
-			<div class="page-nav__item">
-				<ul class="page-nav__item-list">
-					<li class="page-nav__list-item btn"><a href="#" class=" page-nav__item-link">Login</a></li>
-					<li class="page-nav__list-item btn"><a href="#" class=" page-nav__item-link">Sign up</a></li>
-				</ul>
+		<div class="page-nav__wrapper">
+			<div class="page-nav__container">
+				<div class="page-nav__logo">
+					<a href="#"><img class="page-nav__logo-img" src="img/logo.png" alt="LOGO"></a>
+				</div>
+
+				<input type="checkbox" id="page-nav__items-toggle">
+
+				<label for="page-nav__items-toggle" class="page-nav__items-toggle" onclick="checkedShadow('page-nav__items-toggle')">
+					<span class="page-nav__items-icon"></span>
+				</label>
+
+				
+				<div class="page-nav__item">
+					<ul class="page-nav__item-list page-nav__list--first">
+						<li class="page-nav__list-item"><a href="#" class=" page-nav__item-link">Find a job</a></li>
+						<li class="page-nav__list-item"><a href="#" class=" page-nav__item-link">Offer a vacancy</a></li>
+					</ul>
+				</div>
+				<div class="page-nav__item">
+					<ul class="page-nav__item-list page-nav__list--second">
+						<li class="page-nav__list-item btn"><a href="#" class=" page-nav__item-link">Login</a></li>
+						<li class="page-nav__list-item btn"><a href="#" class=" page-nav__item-link">Sign up</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
+		
 	</nav>
 
 	<main id="main">	
 		<section class="index-hero">
 			<div class="index-hero__container">
 
-				<h1 class="heading-primary index-hero__heading">Stop Searching... Start Working.</h1>
+				<h1 class="heading-primary index-hero__heading">Stop&nbsp;Searching... Start&nbsp;Working.</h1>
 
-				<p class="index-hero__text u-margin-bottom-medium">Offer and Apply Different Vacancies Online</p>
+				<p class="index-hero__text u-margin-bottom-medium">Offer and Apply Different&nbsp;Vacancies&nbsp;Online</p>
+
+				<input type="checkbox" id="index-hero__form-toggle">
+
+				<label for="index-hero__form-toggle" class="index-hero__form-toggle btn btn--second">
+					Search For The Best Job
+				</label>
+
 
 				<form class="form" autocomplete="off">
 					<div class="form__level form__selection-group">
@@ -464,7 +498,7 @@
 				<h2 class="red-underline heading-secondary index-find__heading u-margin-bottom-big">Newest This Year</h2>
 				<div class="index-find__cards cards index-find__cards--first u-margin-bottom-huge cards-jobs">
 					<!--<div class="index-find__card card">
-						<img src="./img/computer_science.jpg" alt="work offer" class="index-find__card-img card__img">
+						<img src="./img/job_img-1.jpg" alt="work offer" class="index-find__card-img card__img">
 						<span class="index-find__card-type card__type--pink card__type">NEW</span>
 						<a href="#">
 							<div class="index-find__card-content card__content">
@@ -490,7 +524,7 @@
 					</div>
 
 					<div class="index-find__card card">
-						<img src="./img/design.jpg" alt="work offer" class="index-find__card-img card__img">
+						<img src="./img/job_img-1.jpg" alt="work offer" class="index-find__card-img card__img">
 						<span class="index-find__card-type card__type--pink card__type">NEW</span>
 						<a href="#">
 							<div class="index-find__card-content card__content">
@@ -516,7 +550,7 @@
 					</div>
 
 					<div class="index-find__card card">
-						<img src="./img/medicine.jpg" alt="work offer" class="index-find__card-img card__img">
+						<img src="./img/job_img-1.jpg" alt= "work offer" class="index-find__card-img card__img">
 						<span class="index-find__card-type card__type--pink card__type">NEW</span>
 						<a href="#">
 							<div class="index-find__card-content card__content">
@@ -541,7 +575,7 @@
 						</a>
 					</div>
 					<div class="index-find__card card">
-						<img src="./img/finance.jpg" alt="work offer" class="index-find__card-img card__img">
+						<img src="./img/job_img-1.jpg" alt = "work offer" class="index-find__card-img card__img">
 						<span class="index-find__card-type card__type--pink card__type">NEW</span>
 						<a href="#">
 							<div class="index-find__card-content card__content">
@@ -721,7 +755,6 @@
             </div>      
         </section>
 		<section class="index-cta">
-            <img src="./img/svg/cta-bg.svg" alt="----" class="index-cta__bg-img">
             <div class="index-cta__container">
                 <h2 class="heading-secondary u-margin-bottom-big">Get&nbsp;our&nbsp;newest&nbsp;listings delivered&nbsp;to&nbsp;your&nbsp;inbox.</h2>
                 <a href="#" class="btn btn--second index-cta__link">Sign up</a>
@@ -733,7 +766,7 @@
 		<div class="container">
 			<div class="footer__items">
 				<div class="footer__item">
-					<h4 class="footer__item-header heading-fourth u-margin-bottom-medium">Business</h4>
+					<h4 class="footer__item-header heading-fourth">Business</h4>
 					<ul class="footer__item-list">
 						<li class="footer__list-item"><a href="#" class="footer__item-link">Offer a Vacancy</a></li>
 						<li class="footer__list-item"><a href="#" class="footer__item-link">Apply for Vacancy</a></li>
@@ -741,7 +774,7 @@
 					</ul>
 				</div>
 				<div class="footer__item">
-					<h4 class="footer__item-header heading-fourth u-margin-bottom-medium">About us</h4>
+					<h4 class="footer__item-header heading-fourth">About us</h4>
 					<ul class="footer__item-list">
 						<li class="footer__list-item"><a href="#" class="footer__item-link">What We Do</a></li>
 						<li class="footer__list-item"><a href="#" class="footer__item-link">Our Team</a></li>
@@ -750,7 +783,7 @@
 					</ul>
 				</div>
 				<div class="footer__item">
-					<h4 class="footer__item-header heading-fourth u-margin-bottom-medium">Learn</h4>
+					<h4 class="footer__item-header heading-fourth">Learn</h4>
 					<ul class="footer__item-list">
 						<li class="footer__list-item"><a href="#" class="footer__item-link">How It Works</a></li>
 						<li class="footer__list-item"><a href="#" class="footer__item-link">Financing</a></li>
@@ -759,7 +792,7 @@
 					</ul>
 				</div>
 				<div class="footer__item">
-					<h4 class="footer__item-header heading-fourth u-margin-bottom-medium">Contact us</h4>
+					<h4 class="footer__item-header heading-fourth">Contact us</h4>
 					<ul class="footer__item-list">
 						<li class="footer__list-item">General Inquiries</li>
 						<li class="footer__list-item"><a href="#" class="footer__item-mail">support@aurora.com</a></li>
@@ -768,9 +801,9 @@
 					</ul>
 				</div>
 				<div class="footer__item">
-					<h4 class="footer__item-header heading-fourth u-margin-bottom-medium">Questions?</h4>
+					<h4 class="footer__item-header heading-fourth">Questions?</h4>
 					
-					<div class="footer__item-btn u-margin-bottom-medium">
+					<div class="footer__item-btn u-margin-bottom-medium-1">
 						<a href="#" class="footer__item-link btn btn--second">GET IN TOUCH</a>
 					</div>
 					<ul class="footer__item-list footer__item-list--icons">
@@ -807,8 +840,13 @@
 	    checkboxes.forEach((item) => {
 	        if (item !== checkbox) item.checked = false;
 	    })
-	}
+	};
+
+	function checkedShadow(idCheckBox) {
+		if (document.querySelector('#' + idCheckBox).checked)
+			document.querySelector('.page-nav__wrapper').classList.remove('page-nav__wrapper-shadow');
+		else 
+			document.querySelector('.page-nav__wrapper').classList.add('page-nav__wrapper-shadow');
+	};
 </script>
-
-
 </html>

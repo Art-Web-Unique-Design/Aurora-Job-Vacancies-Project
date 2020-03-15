@@ -12,7 +12,7 @@ export const searchController = async (flag = false, page = 1, findPagesFlag = 0
 
 	// 1) Get and build query from view it depends on companies or jobs we search for
 	let query = searchView.getInput(page);
-	console.log(query);
+	//console.log(query);
 
 	if (query) {
 		// 2) New search object
@@ -21,6 +21,9 @@ export const searchController = async (flag = false, page = 1, findPagesFlag = 0
 		// 3) Prepare UI for results
 		searchView.clearResults();
 		renderLoader(elements.searchContentWindow);
+		searchView.disableButtons(elements.searchingStartButtons);
+		searchView.disableButtons(elements.searchTabs);
+		elements.searchHeadingFormClose.setAttribute("disabled", "");
 		try {
 			// 4) Search for jobs
 			await search.getResults();
@@ -28,12 +31,29 @@ export const searchController = async (flag = false, page = 1, findPagesFlag = 0
 
 			// 5) Render results on UI
 			clearLoader();
+			if (document.querySelector('.index-search__tab--active').innerHTML === 'jobs')
+			{
+				searchView.clearContentLocationHeading();
+				searchView.renderContentLocationHeading('Jobs');
+			}
+			else
+			{
+				searchView.clearContentLocationHeading();
+				searchView.renderContentLocationHeading('Companies');
+			}
+			searchView.enableButtons(elements.searchingStartButtons);
+			searchView.enableButtons(elements.searchTabs);
+			elements.searchHeadingFormClose.removeAttribute("disabled");
 			if (findPagesFlag)
 				searchResNumPages = search.resNumPages;
+			console.log(findPagesFlag);
 			searchView.renderResults(search.result, page, searchResNumPages);
-			console.log('ResNumPages: '+searchResNumPages)
+			//console.log('ResNumPages: '+searchResNumPages)
 		} catch (err) {
 			alert(err + 'Something wrong with the controlSearch...');
+			searchView.enableButtons(elements.searchingStartButtons);
+			searchView.enableButtons(elements.searchTabs);
+			elements.searchHeadingFormClose.removeAttribute("disabled");
 			clearLoader()
 		}
 	}

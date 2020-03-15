@@ -1,8 +1,30 @@
-%main-grid-columns{
+%main-grid-columns {
 	grid-template-columns:[full-start] minmax(6rem, 1fr) [center-start]
 						   repeat(10, [col-start] minmax(min-content, 12.4rem)
 						   [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
+	@media only screen and (max-width: $bp-13) {
+		grid-template-columns:[full-start] minmax(3rem, 1fr) [center-start]
+						   repeat(10, [col-start] minmax(min-content, 12.4rem)
+						   [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+	}
+
+	@media only screen and (max-width: $bp-17) {
+		grid-template-columns:[full-start] minmax(2rem, 1fr) [center-start]
+						   repeat(10, [col-start] minmax(min-content, 12.4rem)
+						   [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+	}
+
+}
+
+%main-sections-styles {
+	display: grid;
+	@extend %main-grid-columns;
+	justify-items: center;
+	padding: $section-padding;
+	@media only screen and (max-width: $bp-17) {
+			padding: $section-padding-sm;
+	}
 }
 
 //* FOR DEVELOPMENT *//
@@ -19,54 +41,45 @@
 	display: grid;
 	padding: $section-padding-small;
 	@extend %main-grid-columns;
+	
+	@media only screen and (max-width: $bp-13) {
+			padding: $section-padding-sm;
+	}
 }
 
 #main {
 	.index-hero {
-		display: grid;
-		@extend %main-grid-columns;
-		justify-items: center;
+		@extend %main-sections-styles;
+		padding-bottom: $section-padding-bottom-top;
+		padding-top: 0;
+		@media only screen and (max-width: $bp-17) {
+			padding-bottom: $section-padding-bottom-top-sm;
+		}
 	}
 
 	.index-how {
-		display: grid;
-		@extend %main-grid-columns;
-		justify-items: center;
-		padding: $section-padding;
+		@extend %main-sections-styles;
 	}
 
 	.index-find{
-		display: grid;
-		@extend %main-grid-columns;
-		justify-items: center;
-		padding: $section-padding;
+		@extend %main-sections-styles;
 	}
 
 	.index-discover {
-		display: grid;
-		@extend %main-grid-columns;
-		justify-items: center;
-		padding: $section-padding;
+		@extend %main-sections-styles;
 	}
 
 	.index-why {
-		display: grid;
-		@extend %main-grid-columns;
-		justify-items: center;
-		padding: $section-padding;
+		@extend %main-sections-styles;
 	}
 
 	.index-cta {
-		display: grid;
-		@extend %main-grid-columns;
-		justify-items: center;
-		padding: $section-padding;
+		@extend %main-sections-styles;
 	}
 }
 
 .footer {
-		display: grid;
-		@extend %main-grid-columns;
-		justify-items: center;
-		padding: $section-padding-medium;
+		@extend %main-sections-styles;
+		padding-top: $section-padding-medium;
+		padding-bottom: $section-padding-bottom-top-sm;
 }

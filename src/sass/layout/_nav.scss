@@ -1,31 +1,180 @@
-.page-nav{
-	&__container {
+%after-element-line {
+	content: '';
+	position: absolute;
+	width: 100%;
+	top: 100%;
+	left: 0;
+	z-index: 2;
+	border-bottom: .1rem solid $color-grey-dark-2;
+	display: none;
+	@media only screen and (max-width: $bp-13) {
+			display: inherit;
+	}
+}
+
+.page-nav {
+	position: relative;
+
+	&__wrapper {
 		grid-column: center-start / center-end;
+		width: 100%;
+
+		&-shadow {
+			box-shadow: $primary-shadow-light;
+		}
+
+		@media only screen and (max-width: $bp-13) {
+			position: absolute;
+			background-color: $color-white;
+		}
+	}
+
+	&__container {
+		
 		height: 8rem;
 
 	// Put all nav__items one after another
 		display: flex;	
 		align-items: center;
+		width: 100%;
+		// border: 1px solid orangered;
+
+		@media only screen and (max-width: $bp-13) {
+			display: grid;
+			grid-template-rows: repeat(3, min-content);
+			justify-self: center;
+			height: 100%;
+		}
 	}
 
-
-	&__item {
-
-		// Put all elements after the first to right
-		&-logo{
+	&__logo {
 			margin-right: auto;
+			position: relative;
+			grid-row: 1 / 2;
+			grid-column: 1 / -1;
+
+			@media only screen and (max-width: $bp-13) {
+				grid-column: 1 / -1;
+				margin-right: 0;
+			}
+
+		&-img {
+			width: $width;
+			@media only screen and (max-width: $bp-13) {
+				width: $nav-picture-width;
+				margin: 0 0 0 2rem;
+			}
 		}
 
+		&::after {
+			@extend %after-element-line;
+			width: 100vw;
+			left: -3rem;
+
+			@media only screen and (max-width: $bp-17) {
+				left: -2rem;
+			}
+			// HERE QUERSTION???
+		}
+	}
+
+// Checkbox button FUNCTIONALITY
+	#page-nav__items-toggle {
+		display: none;
+	}
+
+	&__items-toggle {
+		//display: none;
+		grid-row: 1 / 2;
+		grid-column: 1 / -1;
+		position: relative;
+		justify-self: end;
+		display: none;
+		margin: 0 4rem 0 0;
+		width: 4rem;
+		height: 4rem;
+		cursor: pointer;
+		align-items: center;
+		justify-content: center;
+
+		@media only screen and (max-width: $bp-13) {
+			display: flex;
+		}
+	}
+
+	&__items-icon {
+		position: relative;
+		
+		&,
+		&::before,
+		&::after {
+			content: '';
+			width: 3rem;
+			height: 2px;
+			background-color: $color-grey-dark-3;
+			display: inline-block;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			transition: all .2s;
+		}
+
+		&::before {
+			top: -.8rem;
+		}
+
+		&::after {
+			top: .8rem;
+		}
+	}
+	
+	// With hover does not work checked!!!
+
+	#page-nav__items-toggle:checked ~ &__item {
+		display: inherit;
+	}
+
+	#page-nav__items-toggle:checked + &__items-toggle &__items-icon {
+		background-color: transparent;
+	}
+
+	#page-nav__items-toggle:checked + &__items-toggle &__items-icon::before {
+		top: 0;
+		transform: rotate(135deg);
+	}
+
+	#page-nav__items-toggle:checked + &__items-toggle &__items-icon::after {
+		top: 0;
+		transform: rotate(-135deg);
+	}
+
+// ITEMS STYLES
+	&__item {
+		background-color: $color-white;
+		position: relative;
+		margin-right: $right-margin;
+
+		// Put all elements after the first to right
 		&:nth-child(2){
 			margin-right: $right-margin-2;
 		}
 
-		&-img{
-			width: $width;
-		}
-
 		&-link {
 			color: $color-secondary;
+		}
+
+		// Line under the block
+		&:last-child::after {
+			@extend %after-element-line;
+		}
+
+		@media only screen and (max-width: $bp-13) {
+			display: none;
+			width: 100%;
 		}
 	}
 
@@ -36,15 +185,66 @@
 			a{
 				color: $color-primary;
 			}
+
+			&:first-child {
+				margin-right: $right-margin;
+			}
+
+			@media only screen and (max-width: $bp-13) {
+				padding: 1rem 8rem;
+				border: .3rem solid $color-primary;
+			}
+
+			@media only screen and (max-width: $bp-14) {
+				padding: 1rem 6rem;
+			}
+
+			@media only screen and (max-width: $bp-16) {
+				padding: 1rem 4rem;
+			}
+
+			@media only screen and (max-width: $bp-17) {
+				padding: .8rem 2rem;
+			}
+		}
+	}
+
+	&__list {
+		&--first {
+			.page-nav__list-item {
+				position: relative;
+
+				@media only screen and (max-width: $bp-13) {
+					padding: $row-gap-2 2rem; 
+				}
+
+				&::after {
+					@extend %after-element-line;
+				}
+			}
+			
+			@media only screen and (max-width: $bp-13) {
+				flex-direction: column;
+			}
+		}
+
+		&--second {
+			@media only screen and (max-width: $bp-13) {
+					margin: $row-gap-2 2rem; 
+				}
 		}
 	}
 
 	&__list-item {
-		&:first-child{
+
+		&:first-child {
 			margin-right: $right-margin;
+			@media only screen and (max-width: $bp-13) {
+					margin-right: 0; 
+				}
 		}
 
-		&:hover{
+		&:hover {
 			box-shadow: none;
 		}
 	}
